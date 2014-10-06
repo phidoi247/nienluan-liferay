@@ -1,0 +1,14 @@
+Give a try to mod_proxy_http, You need to enable mod_proxy and mod_proxy_http:
+
+LoadModule proxy_module /usr/lib/apache2/modules/mod_proxy.so
+LoadModule proxy_http_module /usr/lib/apache2/modules/mod_proxy_http.so
+Then in your VirtualHost section:
+
+ProxyRequests Off
+ProxyPreserveHost On
+ProxyPass /css !
+ProxyPass /img !
+ProxyPass /js !
+ProxyPass / http://localhost:8080/myapp/
+ProxyPassReverse / http://localhost:8080/myapp/
+Note: the ProxyPass /xxx ! are not needed from your question. I just wanted to show how to exclude some URI from being 'translated'
