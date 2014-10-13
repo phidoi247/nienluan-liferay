@@ -6,6 +6,7 @@
 	<category name="category.sample">
 		<portlet id="dang-bai"></portlet>
 		<portlet id="chi-tiet-san-pham"></portlet>
+		<portlet id="list-san-pham"></portlet>
 	</category>
 	<category name="category.quanlysp">
 		<portlet id="quan-ly-loai-sp"></portlet>
