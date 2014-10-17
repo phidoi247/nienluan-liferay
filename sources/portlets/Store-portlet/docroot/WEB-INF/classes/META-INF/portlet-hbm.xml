@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.thanhnhan.model.KhuVuc" />
+	<import class="com.thanhnhan.model.LoaiSP" />
+	<import class="com.thanhnhan.model.SanPham" />
+	<class name="com.thanhnhan.model.impl.KhuVucImpl" table="MienTayAds_KhuVuc">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="khuVucId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="khuVucName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.thanhnhan.model.impl.LoaiSPImpl" table="MienTayAds_LoaiSP">
+		<cache usage="read-write" />
+		<id name="loaiSPId" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="loaiSPName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.thanhnhan.model.impl.SanPhamImpl" table="MienTayAds_SanPham">
+		<cache usage="read-write" />
+		<id name="spId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="spName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="desc" type="com.liferay.portal.dao.orm.hibernate.StringType" column="desc_" />
+		<property name="nguoiDang" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sdt" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="diaChi" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="gia" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ngayDang" type="org.hibernate.type.TimestampType" />
+		<property name="image" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="loaiSPId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="khuVucId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="passWord" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="loaiNguoiDung" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="loaiMuaBan" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.thanhnhan.model.impl.KhuVucModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="khuVucId" />
+			<basic name="khuVucName" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.thanhnhan.model.impl.LoaiSPModelImpl">
+		<attributes>
+			<id name="loaiSPId" />
+			<basic name="loaiSPName" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.thanhnhan.model.impl.SanPhamModelImpl">
+		<attributes>
+			<id name="spId" />
+			<basic name="spName" />
+			<basic name="desc">
+				<column name="DESC_" />
+			</basic>
+			<basic name="nguoiDang" />
+			<basic name="sdt" />
+			<basic name="diaChi" />
+			<basic name="gia" />
+			<basic name="ngayDang">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="image" />
+			<basic name="loaiSPId" />
+			<basic name="khuVucId" />
+			<basic name="passWord" />
+			<basic name="loaiNguoiDung" />
+			<basic name="loaiMuaBan" />
+			<basic name="email" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.thanhnhan.model.impl.KhuVucImpl" name="KhuVuc">
+		<table name="MienTayAds_KhuVuc" />
+		<attributes />
+	</entity>
+	<entity class="com.thanhnhan.model.impl.LoaiSPImpl" name="LoaiSP">
+		<table name="MienTayAds_LoaiSP" />
+		<attributes />
+	</entity>
+	<entity class="com.thanhnhan.model.impl.SanPhamImpl" name="SanPham">
+		<table name="MienTayAds_SanPham" />
+		<attributes />
+	</entity>
+</entity-mappings>
