@@ -137,8 +137,8 @@
 	</portlet>
 	<portlet>
 		<portlet-name>list-san-pham</portlet-name>
-		<display-name>Danh Sach San Pham</display-name>
-		<portlet-class>com.thanhnhan.ChiTietSanPham</portlet-class>
+		<display-name>List San Pham</display-name>
+		<portlet-class>com.thanhnhan.ListSanPham</portlet-class>
 		<init-param>
 			<name>view-template</name>
 			<value>/html/listsanpham/view.jsp</value>
@@ -149,8 +149,39 @@
 			<portlet-mode>view</portlet-mode>
 		</supports>
 		<portlet-info>
-			<title>Danh Sach San Pham</title>
-			<short-title>Danh Sach San Pham</short-title>
+			<title>List San Pham</title>
+			<short-title>List San Pham</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>search-sp</portlet-name>
+		<display-name>Search Sp</display-name>
+		<portlet-class>com.thanhnhantn.SearchSP</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/searchsp/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Search Sp</title>
+			<short-title>Search Sp</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>

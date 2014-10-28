@@ -48,6 +48,24 @@
 		</footer-portlet-javascript>
 		<css-class-wrapper>chi-tiet-san-pham-portlet</css-class-wrapper>
 	</portlet>
+	<portlet>
+		<portlet-name>list-san-pham</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>list-san-pham-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>search-sp</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>search-sp-portlet</css-class-wrapper>
+	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>
 		<role-link>Administrator</role-link>

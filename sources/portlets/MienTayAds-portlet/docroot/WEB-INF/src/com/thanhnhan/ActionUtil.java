@@ -52,7 +52,7 @@ public class ActionUtil {
 			// TODO: handle exception
 			tempResult = Collections.emptyList();
 		}
-		
+
 		return tempResult;
 	}
 
@@ -83,8 +83,8 @@ public class ActionUtil {
 		}
 		return tempResult;
 	}
-	
-	public static SanPham SanPhamFromRequest(ActionRequest request){
+
+	public static SanPham SanPhamFromRequest(ActionRequest request) {
 		SanPham sp = new SanPhamImpl();
 		sp.setSpName(ParamUtil.getString(request, "spName"));
 		sp.setDesc(ParamUtil.getString(request, "desc"));
@@ -94,7 +94,7 @@ public class ActionUtil {
 		sp.setGia(ParamUtil.getString(request, "gia"));
 		sp.setNgayDang(new Date());
 		sp.setImage("/image");
-		//sp.setImage(ParamUtil.getString(request, "image"));
+		// sp.setImage(ParamUtil.getString(request, "image"));
 		sp.setLoaiSPId(ParamUtil.getLong(request, "loaiSPId"));
 		sp.setKhuVucId(ParamUtil.getLong(request, "khuVucId"));
 		sp.setPassWord(ParamUtil.getString(request, "passWord"));
@@ -103,7 +103,22 @@ public class ActionUtil {
 		sp.setEmail(ParamUtil.getString(request, "email"));
 		return sp;
 	}
-	public static List<SanPham> getListSPs(int start,int end) {
+
+	public static List<SanPham> getListSPs() {
+		// ThemeDisplay themeDisplay = (ThemeDisplay) request
+		// .getAttribute(WebKeys.THEME_DISPLAY);
+		List<SanPham> tempResult;
+		try {
+			tempResult = SanPhamLocalServiceUtil.getSanPhams();
+		} catch (SystemException e) {
+			// TODO: handle exception
+			// KHong co SP nao
+			tempResult = Collections.emptyList();
+		}
+		return tempResult;
+	}
+
+	public static List<SanPham> getListSPs(int start, int end) {
 		// ThemeDisplay themeDisplay = (ThemeDisplay) request
 		// .getAttribute(WebKeys.THEME_DISPLAY);
 		List<SanPham> tempResult;

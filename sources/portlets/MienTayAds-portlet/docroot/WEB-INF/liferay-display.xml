@@ -7,6 +7,7 @@
 		<portlet id="dang-bai"></portlet>
 		<portlet id="chi-tiet-san-pham"></portlet>
 		<portlet id="list-san-pham"></portlet>
+		<portlet id="search-sp"></portlet>
 	</category>
 	<category name="category.quanlysp">
 		<portlet id="quan-ly-loai-sp"></portlet>

@@ -13,8 +13,7 @@
 	</div>
 	<aui:row class="ui_row">
 		<aui:select label="chon-khu-vuc" model="<%=KhuVuc.class%>"
-			id="dang-tin-khuvuc" name="khuVucId" showEmptyOption="<%=false%>"
-			required="true">
+			id="dang-tin-khuvuc" name="khuVucId" showEmptyOption="<%=false%>">
 			<%
 				// lay danh sach khu vuc trong Database, 
 							// vong lap trong danh sach in ra select các Khuvuc
@@ -31,8 +30,7 @@
 	</aui:row>
 	<aui:row class="ui_row">
 		<aui:select label="chon-loai-sp" model="<%=KhuVuc.class%>"
-			id="dang-tin-loaisp" name="loaiSPId" showEmptyOption="<%=false%>"
-			required="true">
+			id="dang-tin-loaisp" name="loaiSPId" required="true">
 			<%
 				// lay danh sach LoaiSP trong Database, 
 							// vong lap trong danh sach in ra select các LoaiSP
