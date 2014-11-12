@@ -4,6 +4,9 @@
 <display>
 
 	<category name="category.sample">
+		
+	</category>
+	<category name="category.raovat-app">
 		<portlet id="dang-bai"></portlet>
 		<portlet id="chi-tiet-san-pham"></portlet>
 		<portlet id="list-san-pham"></portlet>
@@ -12,5 +15,7 @@
 	<category name="category.quanlysp">
 		<portlet id="quan-ly-loai-sp"></portlet>
 		<portlet id="quan-ly-kv"></portlet>
+		<portlet id="quan-ly"></portlet>
+		<portlet id="quan-ly-tin"></portlet>
 	</category>
 </display>

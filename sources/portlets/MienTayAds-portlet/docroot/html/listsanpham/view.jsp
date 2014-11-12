@@ -11,14 +11,13 @@
 <%@ page isELIgnored="false"%>
 <%@ include file="/init.jsp"%>
 <portlet:defineObjects />
-
 <%
 	List<SanPham> listSP = ActionUtil.getListSPs();
 	SanPham sp = new SanPhamImpl();
 %>
-<%-- 	<c:forEach var="sp" items="${sp}"> --%>
-<%-- 	<c:out value="${sp.desc}"></c:out> --%>
-<%-- 	</c:forEach> --%>
+<%--  <c:forEach var="sp" items="${sp}"> --%>
+<%--  <c:out value="${sp.desc}"></c:out> --%>
+<%--  </c:forEach> --%>
 <%
 	if (listSP == null) {
 %>
@@ -26,24 +25,20 @@ Không có sản phẩm nào
 <%
 	} // end if
 	else {
+
+		for (SanPham s : listSP) {
 %>
+<div class="sanpham-item spid_<%=s.getSpId()%>">
+	<div class="img-thumb"><%=s.getImage()%></div>
+	<div class="sp-info">
+		<span class="sp-name"> <%=s.getSpName()%></span><br /> 
+		Giá: <span class="sp-gia"> <%=s.getGia()%></span>
+	</div>
+</div>
 
-<liferay-ui:search-container delta="5"
-	emptyResultsMessage="Không có sản phẩm nào">
-
-	<liferay-ui:search-container-results>
-	<%
-	results = ListUtil.subList(listSP,
-			searchContainer.getStart(),
-			searchContainer.getEnd());
-	total =  listSP.size();
-	%>
-	</liferay-ui:search-container-results>
-<liferay-ui:search-container-row className="com.thanhnhan.model.SanPham"
-	keyProperty="spId" modelVar="curSP">
-		
-	</liferay-ui:search-container-row>
-</liferay-ui:search-container>
+<%
+	}
+%>
 
 <%
 	} // end else

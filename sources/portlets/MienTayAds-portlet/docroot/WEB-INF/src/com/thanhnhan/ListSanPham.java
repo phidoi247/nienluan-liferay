@@ -15,6 +15,6 @@ public class ListSanPham extends MVCPortlet {
 		// Get keyword
 		String SPName = ParamUtil.getString(request, "spname");
 		request.setAttribute("SPName", SPName);
-		
+
 	}
 }
