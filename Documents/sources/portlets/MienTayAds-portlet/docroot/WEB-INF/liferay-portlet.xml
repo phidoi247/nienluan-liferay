@@ -20,6 +20,7 @@
 		<icon>/icon.png</icon>
 		<control-panel-entry-category>my</control-panel-entry-category>
 		<control-panel-entry-weight>1.5</control-panel-entry-weight>
+		<instanceable>false</instanceable>
 		<header-portlet-css>/css/main.css</header-portlet-css>
 		<footer-portlet-javascript>
 			/js/main.js
@@ -47,6 +48,45 @@
 			/js/main.js
 		</footer-portlet-javascript>
 		<css-class-wrapper>chi-tiet-san-pham-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>list-san-pham</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>list-san-pham-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>search-sp</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>search-sp-portlet</css-class-wrapper>
+	</portlet>
+
+	<portlet>
+		<portlet-name>quan-ly</portlet-name>
+		<icon>/icon.png</icon>
+		<control-panel-entry-category>apps</control-panel-entry-category>
+		<control-panel-entry-weight>1.5</control-panel-entry-weight>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>quan-ly-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>quan-ly-tin</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>quan-ly-tin-portlet</css-class-wrapper>
 	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>
