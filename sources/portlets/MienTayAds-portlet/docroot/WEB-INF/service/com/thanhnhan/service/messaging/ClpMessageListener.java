@@ -22,6 +22,8 @@ import com.thanhnhan.service.KhuVucLocalServiceUtil;
 import com.thanhnhan.service.KhuVucServiceUtil;
 import com.thanhnhan.service.LoaiSPLocalServiceUtil;
 import com.thanhnhan.service.LoaiSPServiceUtil;
+import com.thanhnhan.service.OptionsLocalServiceUtil;
+import com.thanhnhan.service.OptionsServiceUtil;
 import com.thanhnhan.service.SanPhamLocalServiceUtil;
 import com.thanhnhan.service.SanPhamServiceUtil;
 
@@ -46,6 +48,9 @@ public class ClpMessageListener extends BaseMessageListener {
 			LoaiSPLocalServiceUtil.clearService();
 
 			LoaiSPServiceUtil.clearService();
+			OptionsLocalServiceUtil.clearService();
+
+			OptionsServiceUtil.clearService();
 			SanPhamLocalServiceUtil.clearService();
 
 			SanPhamServiceUtil.clearService();

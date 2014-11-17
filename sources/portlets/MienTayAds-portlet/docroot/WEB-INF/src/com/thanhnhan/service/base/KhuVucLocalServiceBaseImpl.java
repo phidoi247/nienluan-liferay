@@ -36,6 +36,7 @@ import com.thanhnhan.model.KhuVuc;
 import com.thanhnhan.service.KhuVucLocalService;
 import com.thanhnhan.service.persistence.KhuVucPersistence;
 import com.thanhnhan.service.persistence.LoaiSPPersistence;
+import com.thanhnhan.service.persistence.OptionsPersistence;
 import com.thanhnhan.service.persistence.SanPhamPersistence;
 
 import java.io.Serializable;
@@ -387,6 +388,62 @@ public abstract class KhuVucLocalServiceBaseImpl extends BaseLocalServiceImpl
 	}
 
 	/**
+	 * Returns the options local service.
+	 *
+	 * @return the options local service
+	 */
+	public com.thanhnhan.service.OptionsLocalService getOptionsLocalService() {
+		return optionsLocalService;
+	}
+
+	/**
+	 * Sets the options local service.
+	 *
+	 * @param optionsLocalService the options local service
+	 */
+	public void setOptionsLocalService(
+		com.thanhnhan.service.OptionsLocalService optionsLocalService) {
+		this.optionsLocalService = optionsLocalService;
+	}
+
+	/**
+	 * Returns the options remote service.
+	 *
+	 * @return the options remote service
+	 */
+	public com.thanhnhan.service.OptionsService getOptionsService() {
+		return optionsService;
+	}
+
+	/**
+	 * Sets the options remote service.
+	 *
+	 * @param optionsService the options remote service
+	 */
+	public void setOptionsService(
+		com.thanhnhan.service.OptionsService optionsService) {
+		this.optionsService = optionsService;
+	}
+
+	/**
+	 * Returns the options persistence.
+	 *
+	 * @return the options persistence
+	 */
+	public OptionsPersistence getOptionsPersistence() {
+		return optionsPersistence;
+	}
+
+	/**
+	 * Sets the options persistence.
+	 *
+	 * @param optionsPersistence the options persistence
+	 */
+	public void setOptionsPersistence(OptionsPersistence optionsPersistence) {
+		this.optionsPersistence = optionsPersistence;
+	}
+
+	/**
 	 * Returns the san pham local service.
 	 *
 	 * @return the san pham local service
@@ -630,6 +687,12 @@ public abstract class KhuVucLocalServiceBaseImpl extends BaseLocalServiceImpl
 	protected com.thanhnhan.service.LoaiSPService loaiSPService;
 	@BeanReference(type = LoaiSPPersistence.class)
 	protected LoaiSPPersistence loaiSPPersistence;
+	@BeanReference(type = com.thanhnhan.service.OptionsLocalService.class)
+	protected com.thanhnhan.service.OptionsLocalService optionsLocalService;
+	@BeanReference(type = com.thanhnhan.service.OptionsService.class)
+	protected com.thanhnhan.service.OptionsService optionsService;
+	@BeanReference(type = OptionsPersistence.class)
+	protected OptionsPersistence optionsPersistence;
 	@BeanReference(type = com.thanhnhan.service.SanPhamLocalService.class)
 	protected com.thanhnhan.service.SanPhamLocalService sanPhamLocalService;
 	@BeanReference(type = com.thanhnhan.service.SanPhamService.class)

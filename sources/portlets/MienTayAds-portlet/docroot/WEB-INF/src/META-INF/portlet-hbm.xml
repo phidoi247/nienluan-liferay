@@ -4,6 +4,7 @@
 <hibernate-mapping default-lazy="false" auto-import="false">
 	<import class="com.thanhnhan.model.KhuVuc" />
 	<import class="com.thanhnhan.model.LoaiSP" />
+	<import class="com.thanhnhan.model.Options" />
 	<import class="com.thanhnhan.model.SanPham" />
 	<class name="com.thanhnhan.model.impl.KhuVucImpl" table="MienTayAds_KhuVuc">
 		<cache usage="read-write" />
@@ -19,6 +20,13 @@
 			<generator class="increment" />
 		</id>
 		<property name="loaiSPName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.thanhnhan.model.impl.OptionsImpl" table="MienTayAds_Options">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="option_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
 	<class name="com.thanhnhan.model.impl.SanPhamImpl" table="MienTayAds_SanPham">
 		<cache usage="read-write" />

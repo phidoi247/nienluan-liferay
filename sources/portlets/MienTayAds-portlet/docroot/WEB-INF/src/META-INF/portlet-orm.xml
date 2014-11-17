@@ -28,6 +28,17 @@
 			<transient name="primaryKeyObj" />
 		</attributes>
 	</mapped-superclass>
+	<mapped-superclass class="com.thanhnhan.model.impl.OptionsModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="option_name" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
 	<mapped-superclass class="com.thanhnhan.model.impl.SanPhamModelImpl">
 		<attributes>
 			<id name="spId" />
@@ -60,6 +71,10 @@
 	</entity>
 	<entity class="com.thanhnhan.model.impl.LoaiSPImpl" name="LoaiSP">
 		<table name="MienTayAds_LoaiSP" />
+		<attributes />
+	</entity>
+	<entity class="com.thanhnhan.model.impl.OptionsImpl" name="Options">
+		<table name="MienTayAds_Options" />
 		<attributes />
 	</entity>
 	<entity class="com.thanhnhan.model.impl.SanPhamImpl" name="SanPham">

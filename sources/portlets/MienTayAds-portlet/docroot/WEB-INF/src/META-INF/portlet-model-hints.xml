@@ -10,6 +10,10 @@
 		<field name="loaiSPId" type="long" />
 		<field name="loaiSPName" type="String" />
 	</model>
+	<model name="com.thanhnhan.model.Options">
+		<field name="id" type="long" />
+		<field name="option_name" type="String" />
+	</model>
 	<model name="com.thanhnhan.model.SanPham">
 		<field name="spId" type="long" />
 		<field name="spName" type="String" />

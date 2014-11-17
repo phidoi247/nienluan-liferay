@@ -27,6 +27,7 @@ import com.liferay.portal.model.BaseModel;
 
 import com.thanhnhan.model.KhuVucClp;
 import com.thanhnhan.model.LoaiSPClp;
+import com.thanhnhan.model.OptionsClp;
 import com.thanhnhan.model.SanPhamClp;
 
 import java.io.ObjectInputStream;
@@ -112,6 +113,10 @@ public class ClpSerializer {
 			return translateInputLoaiSP(oldModel);
 		}
 
+		if (oldModelClassName.equals(OptionsClp.class.getName())) {
+			return translateInputOptions(oldModel);
+		}
+
 		if (oldModelClassName.equals(SanPhamClp.class.getName())) {
 			return translateInputSanPham(oldModel);
 		}
@@ -151,6 +156,16 @@ public class ClpSerializer {
 		return newModel;
 	}
 
+	public static Object translateInputOptions(BaseModel<?> oldModel) {
+		OptionsClp oldClpModel = (OptionsClp)oldModel;
+
+		BaseModel<?> newModel = oldClpModel.getOptionsRemoteModel();
+
+		newModel.setModelAttributes(oldClpModel.getModelAttributes());
+
+		return newModel;
+	}
+
 	public static Object translateInputSanPham(BaseModel<?> oldModel) {
 		SanPhamClp oldClpModel = (SanPhamClp)oldModel;
 
@@ -184,6 +199,10 @@ public class ClpSerializer {
 
 		if (oldModelClassName.equals("com.thanhnhan.model.impl.LoaiSPImpl")) {
 			return translateOutputLoaiSP(oldModel);
+		}
+
+		if (oldModelClassName.equals("com.thanhnhan.model.impl.OptionsImpl")) {
+			return translateOutputOptions(oldModel);
 		}
 
 		if (oldModelClassName.equals("com.thanhnhan.model.impl.SanPhamImpl")) {
@@ -278,6 +297,10 @@ public class ClpSerializer {
 			return new com.thanhnhan.NoSuchLoaiSPException();
 		}
 
+		if (className.equals("com.thanhnhan.NoSuchOptionsException")) {
+			return new com.thanhnhan.NoSuchOptionsException();
+		}
+
 		if (className.equals("com.thanhnhan.NoSuchSanPhamException")) {
 			return new com.thanhnhan.NoSuchSanPhamException();
 		}
@@ -301,6 +324,16 @@ public class ClpSerializer {
 		newModel.setModelAttributes(oldModel.getModelAttributes());
 
 		newModel.setLoaiSPRemoteModel(oldModel);
+
+		return newModel;
+	}
+
+	public static Object translateOutputOptions(BaseModel<?> oldModel) {
+		OptionsClp newModel = new OptionsClp();
+
+		newModel.setModelAttributes(oldModel.getModelAttributes());
+
+		newModel.setOptionsRemoteModel(oldModel);
 
 		return newModel;
 	}
