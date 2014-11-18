@@ -5,6 +5,7 @@
 	<import class="com.thanhnhan.model.KhuVuc" />
 	<import class="com.thanhnhan.model.LoaiSP" />
 	<import class="com.thanhnhan.model.SanPham" />
+	<import class="com.thanhnhan.model.TNOptions" />
 	<class name="com.thanhnhan.model.impl.KhuVucImpl" table="MienTayAds_KhuVuc">
 		<cache usage="read-write" />
 		<id name="id" column="id_" type="long">
@@ -39,5 +40,13 @@
 		<property name="loaiNguoiDung" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
 		<property name="loaiMuaBan" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
 		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.thanhnhan.model.impl.TNOptionsImpl" table="MienTayAds_TNOptions">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="option_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
 </hibernate-mapping>

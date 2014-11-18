@@ -65,25 +65,20 @@
 <%
 	int totals = listSP.size(); //total records
 	//break total records into pages
-	int pages = ceil($get_total_rows[0]/$item_per_page);   
+// 	int pages = ceil($get_total_rows[0]/$item_per_page);   
 
 //create pagination
-$pagination = '';
-if($pages > 1)
-{
-    $pagination .= '<ul class="paginate">';
-    for($i = 1; $i<$pages; $i++)
-    {
-        $pagination .= '<li><a href="#" class="paginate_click" id="'.$i.'-page">'.$i.'</a></li>';
-    }
-    $pagination .= '</ul>';
-}
+// $pagination = '';
+// if($pages > 1)
+// {
+//     $pagination .= '<ul class="paginate">';
+//     for($i = 1; $i<$pages; $i++)
+//     {
+//         $pagination .= '<li><a href="#" class="paginate_click" id="'.$i.'-page">'.$i.'</a></li>';
+//     }
+//     $pagination .= '</ul>';
+// }
 
-?>
+// ?>
     
-%>
-<%@page import="com.liferay.portal.kernel.search.Hits" %>
-<%
-Hits hits = AssetUtil.search(request, assetEntryQuery, 0, AssetEntryLocalServiceUtil.getAssetEntriesCount());
-int groupTotal = hits.getLength();
 %>

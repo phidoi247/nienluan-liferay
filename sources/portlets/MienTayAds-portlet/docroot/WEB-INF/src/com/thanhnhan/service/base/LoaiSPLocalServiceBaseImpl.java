@@ -36,8 +36,8 @@ import com.thanhnhan.model.LoaiSP;
 import com.thanhnhan.service.LoaiSPLocalService;
 import com.thanhnhan.service.persistence.KhuVucPersistence;
 import com.thanhnhan.service.persistence.LoaiSPPersistence;
-import com.thanhnhan.service.persistence.OptionsPersistence;
 import com.thanhnhan.service.persistence.SanPhamPersistence;
+import com.thanhnhan.service.persistence.TNOptionsPersistence;
 
 import java.io.Serializable;
 
@@ -390,62 +390,6 @@ public abstract class LoaiSPLocalServiceBaseImpl extends BaseLocalServiceImpl
 	}
 
 	/**
-	 * Returns the options local service.
-	 *
-	 * @return the options local service
-	 */
-	public com.thanhnhan.service.OptionsLocalService getOptionsLocalService() {
-		return optionsLocalService;
-	}
-
-	/**
-	 * Sets the options local service.
-	 *
-	 * @param optionsLocalService the options local service
-	 */
-	public void setOptionsLocalService(
-		com.thanhnhan.service.OptionsLocalService optionsLocalService) {
-		this.optionsLocalService = optionsLocalService;
-	}
-
-	/**
-	 * Returns the options remote service.
-	 *
-	 * @return the options remote service
-	 */
-	public com.thanhnhan.service.OptionsService getOptionsService() {
-		return optionsService;
-	}
-
-	/**
-	 * Sets the options remote service.
-	 *
-	 * @param optionsService the options remote service
-	 */
-	public void setOptionsService(
-		com.thanhnhan.service.OptionsService optionsService) {
-		this.optionsService = optionsService;
-	}
-
-	/**
-	 * Returns the options persistence.
-	 *
-	 * @return the options persistence
-	 */
-	public OptionsPersistence getOptionsPersistence() {
-		return optionsPersistence;
-	}
-
-	/**
-	 * Sets the options persistence.
-	 *
-	 * @param optionsPersistence the options persistence
-	 */
-	public void setOptionsPersistence(OptionsPersistence optionsPersistence) {
-		this.optionsPersistence = optionsPersistence;
-	}
-
-	/**
 	 * Returns the san pham local service.
 	 *
 	 * @return the san pham local service
@@ -499,6 +443,63 @@ public abstract class LoaiSPLocalServiceBaseImpl extends BaseLocalServiceImpl
 	 */
 	public void setSanPhamPersistence(SanPhamPersistence sanPhamPersistence) {
 		this.sanPhamPersistence = sanPhamPersistence;
+	}
+
+	/**
+	 * Returns the t n options local service.
+	 *
+	 * @return the t n options local service
+	 */
+	public com.thanhnhan.service.TNOptionsLocalService getTNOptionsLocalService() {
+		return tnOptionsLocalService;
+	}
+
+	/**
+	 * Sets the t n options local service.
+	 *
+	 * @param tnOptionsLocalService the t n options local service
+	 */
+	public void setTNOptionsLocalService(
+		com.thanhnhan.service.TNOptionsLocalService tnOptionsLocalService) {
+		this.tnOptionsLocalService = tnOptionsLocalService;
+	}
+
+	/**
+	 * Returns the t n options remote service.
+	 *
+	 * @return the t n options remote service
+	 */
+	public com.thanhnhan.service.TNOptionsService getTNOptionsService() {
+		return tnOptionsService;
+	}
+
+	/**
+	 * Sets the t n options remote service.
+	 *
+	 * @param tnOptionsService the t n options remote service
+	 */
+	public void setTNOptionsService(
+		com.thanhnhan.service.TNOptionsService tnOptionsService) {
+		this.tnOptionsService = tnOptionsService;
+	}
+
+	/**
+	 * Returns the t n options persistence.
+	 *
+	 * @return the t n options persistence
+	 */
+	public TNOptionsPersistence getTNOptionsPersistence() {
+		return tnOptionsPersistence;
+	}
+
+	/**
+	 * Sets the t n options persistence.
+	 *
+	 * @param tnOptionsPersistence the t n options persistence
+	 */
+	public void setTNOptionsPersistence(
+		TNOptionsPersistence tnOptionsPersistence) {
+		this.tnOptionsPersistence = tnOptionsPersistence;
 	}
 
 	/**
@@ -689,18 +690,18 @@ public abstract class LoaiSPLocalServiceBaseImpl extends BaseLocalServiceImpl
 	protected com.thanhnhan.service.LoaiSPService loaiSPService;
 	@BeanReference(type = LoaiSPPersistence.class)
 	protected LoaiSPPersistence loaiSPPersistence;
-	@BeanReference(type = com.thanhnhan.service.OptionsLocalService.class)
-	protected com.thanhnhan.service.OptionsLocalService optionsLocalService;
-	@BeanReference(type = com.thanhnhan.service.OptionsService.class)
-	protected com.thanhnhan.service.OptionsService optionsService;
-	@BeanReference(type = OptionsPersistence.class)
-	protected OptionsPersistence optionsPersistence;
 	@BeanReference(type = com.thanhnhan.service.SanPhamLocalService.class)
 	protected com.thanhnhan.service.SanPhamLocalService sanPhamLocalService;
 	@BeanReference(type = com.thanhnhan.service.SanPhamService.class)
 	protected com.thanhnhan.service.SanPhamService sanPhamService;
 	@BeanReference(type = SanPhamPersistence.class)
 	protected SanPhamPersistence sanPhamPersistence;
+	@BeanReference(type = com.thanhnhan.service.TNOptionsLocalService.class)
+	protected com.thanhnhan.service.TNOptionsLocalService tnOptionsLocalService;
+	@BeanReference(type = com.thanhnhan.service.TNOptionsService.class)
+	protected com.thanhnhan.service.TNOptionsService tnOptionsService;
+	@BeanReference(type = TNOptionsPersistence.class)
+	protected TNOptionsPersistence tnOptionsPersistence;
 	@BeanReference(type = com.liferay.counter.service.CounterLocalService.class)
 	protected com.liferay.counter.service.CounterLocalService counterLocalService;
 	@BeanReference(type = com.liferay.portal.service.ResourceLocalService.class)

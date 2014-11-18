@@ -32,6 +32,12 @@ create table MienTayAds_SanPham (
 	email VARCHAR(75) null
 );
 
+create table MienTayAds_TNOptions (
+	id_ LONG not null primary key,
+	option_name VARCHAR(75) null,
+	value VARCHAR(75) null
+);
+
 create table loaiSP_KhuVuc (
 	id_ LONG not null primary key,
 	khuVucId VARCHAR(75) null,

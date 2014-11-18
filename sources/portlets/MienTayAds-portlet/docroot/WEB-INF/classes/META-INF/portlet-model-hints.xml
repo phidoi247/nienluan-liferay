@@ -27,4 +27,9 @@
 		<field name="loaiMuaBan" type="int" />
 		<field name="email" type="String" />
 	</model>
+	<model name="com.thanhnhan.model.TNOptions">
+		<field name="id" type="long" />
+		<field name="option_name" type="String" />
+		<field name="value" type="String" />
+	</model>
 </model-hints>

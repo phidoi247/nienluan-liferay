@@ -31,6 +31,40 @@
 		<column name="loaiNguoiDung" type="int"></column>
 		<column name="loaiMuaBan" type="int"></column>
 		<column name="email" type="String"></column>
+
+
+		<!-- PK fields -->
+
+		<column name="sanPhamId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+
+		<!-- PK fields -->
+
+		<column name="sanPhamId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
 	</entity>
 	<entity name="KhuVuc" local-service="true">
 		<column name="id" type="long" primary="true" id-type="increment"></column>
@@ -41,8 +75,12 @@
 		</finder>
 
 	</entity>
-	<entity name="Options" local-service="true">
+	<entity name="TNOptions" local-service="true">
 		<column name="id" type="long" primary="true" id-type="increment"></column>
 		<column name="option_name" type="String"></column>
+		<column name="value" type="String"></column>
+		<finder name="id" return-type="TNOptions" unique="true">
+			<finder-column name="id" />
+		</finder>
 	</entity>
 </service-builder>
