@@ -92,7 +92,7 @@
 			id="dang-tin-nguoidang" label="dang-tin-nguoidang"></aui:input>
 	</aui:row>
 	<aui:row class="ui_row">
-		<aui:input name="passWord" length="50" placeholder="place-password"
+		<aui:input type="password" name="passWord" length="50" placeholder="place-password"
 			id="dang-tin-password" label="dang-tin-password"></aui:input>
 	</aui:row>
 	

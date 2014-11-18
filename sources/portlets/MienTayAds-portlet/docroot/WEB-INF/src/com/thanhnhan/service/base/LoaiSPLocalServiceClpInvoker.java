@@ -100,29 +100,29 @@ public class LoaiSPLocalServiceClpInvoker {
 
 		_methodParameterTypes15 = new String[] { "com.thanhnhan.model.LoaiSP" };
 
-		_methodName46 = "getBeanIdentifier";
+		_methodName52 = "getBeanIdentifier";
 
-		_methodParameterTypes46 = new String[] {  };
+		_methodParameterTypes52 = new String[] {  };
 
-		_methodName47 = "setBeanIdentifier";
+		_methodName53 = "setBeanIdentifier";
 
-		_methodParameterTypes47 = new String[] { "java.lang.String" };
+		_methodParameterTypes53 = new String[] { "java.lang.String" };
 
-		_methodName52 = "addLoaiSP";
+		_methodName58 = "addLoaiSP";
 
-		_methodParameterTypes52 = new String[] { "com.thanhnhan.model.LoaiSP" };
+		_methodParameterTypes58 = new String[] { "com.thanhnhan.model.LoaiSP" };
 
-		_methodName53 = "deleteLoaiSP";
+		_methodName59 = "deleteLoaiSP";
 
-		_methodParameterTypes53 = new String[] { "long" };
+		_methodParameterTypes59 = new String[] { "long" };
 
-		_methodName54 = "deleteLoaiSP";
+		_methodName60 = "deleteLoaiSP";
 
-		_methodParameterTypes54 = new String[] { "com.thanhnhan.model.LoaiSP" };
+		_methodParameterTypes60 = new String[] { "com.thanhnhan.model.LoaiSP" };
 
-		_methodName55 = "getAllLoais";
+		_methodName61 = "getAllLoais";
 
-		_methodParameterTypes55 = new String[] {  };
+		_methodParameterTypes61 = new String[] {  };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -214,35 +214,35 @@ public class LoaiSPLocalServiceClpInvoker {
 			return LoaiSPLocalServiceUtil.updateLoaiSP((com.thanhnhan.model.LoaiSP)arguments[0]);
 		}
 
-		if (_methodName46.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
+		if (_methodName52.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
 			return LoaiSPLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName47.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
+		if (_methodName53.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes53, parameterTypes)) {
 			LoaiSPLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName52.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
+		if (_methodName58.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes58, parameterTypes)) {
 			return LoaiSPLocalServiceUtil.addLoaiSP((com.thanhnhan.model.LoaiSP)arguments[0]);
 		}
 
-		if (_methodName53.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes53, parameterTypes)) {
+		if (_methodName59.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes59, parameterTypes)) {
 			return LoaiSPLocalServiceUtil.deleteLoaiSP(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName54.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes54, parameterTypes)) {
+		if (_methodName60.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes60, parameterTypes)) {
 			return LoaiSPLocalServiceUtil.deleteLoaiSP((com.thanhnhan.model.LoaiSP)arguments[0]);
 		}
 
-		if (_methodName55.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes55, parameterTypes)) {
+		if (_methodName61.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes61, parameterTypes)) {
 			return LoaiSPLocalServiceUtil.getAllLoais();
 		}
 
@@ -281,16 +281,16 @@ public class LoaiSPLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName46;
-	private String[] _methodParameterTypes46;
-	private String _methodName47;
-	private String[] _methodParameterTypes47;
 	private String _methodName52;
 	private String[] _methodParameterTypes52;
 	private String _methodName53;
 	private String[] _methodParameterTypes53;
-	private String _methodName54;
-	private String[] _methodParameterTypes54;
-	private String _methodName55;
-	private String[] _methodParameterTypes55;
+	private String _methodName58;
+	private String[] _methodParameterTypes58;
+	private String _methodName59;
+	private String[] _methodParameterTypes59;
+	private String _methodName60;
+	private String[] _methodParameterTypes60;
+	private String _methodName61;
+	private String[] _methodParameterTypes61;
 }

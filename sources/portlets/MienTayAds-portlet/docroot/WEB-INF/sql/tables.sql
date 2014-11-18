@@ -9,6 +9,11 @@ create table MienTayAds_LoaiSP (
 	loaiSPName VARCHAR(75) null
 );
 
+create table MienTayAds_Options (
+	id_ LONG not null primary key,
+	option_name VARCHAR(75) null
+);
+
 create table MienTayAds_SanPham (
 	spId LONG not null primary key,
 	spName VARCHAR(75) null,
