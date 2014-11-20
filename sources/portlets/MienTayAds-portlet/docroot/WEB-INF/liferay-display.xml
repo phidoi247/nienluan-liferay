@@ -4,7 +4,8 @@
 <display>
 
 	<category name="category.sample">
-		
+
+		<portlet id="upload"></portlet>
 	</category>
 	<category name="category.raovat-app">
 		<portlet id="dang-bai"></portlet>

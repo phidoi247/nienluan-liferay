@@ -4,7 +4,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
 	version="2.0">
-	
+
 	<portlet>
 		<portlet-name>quan-ly-loai-sp</portlet-name>
 		<display-name>Category Manager</display-name>
@@ -27,15 +27,15 @@
 		<security-role-ref>
 			<role-name>administrator</role-name>
 		</security-role-ref>
-		<security-role-ref>
-			<role-name>guest</role-name>
-		</security-role-ref>
+		<!-- <security-role-ref> -->
+		<!-- <role-name>guest</role-name> -->
+		<!-- </security-role-ref> -->
 		<security-role-ref>
 			<role-name>power-user</role-name>
 		</security-role-ref>
-		<security-role-ref>
-			<role-name>user</role-name>
-		</security-role-ref>
+		<!-- <security-role-ref> -->
+		<!-- <role-name>user</role-name> -->
+		<!-- </security-role-ref> -->
 	</portlet>
 
 	<portlet>
@@ -61,23 +61,32 @@
 		<security-role-ref>
 			<role-name>administrator</role-name>
 		</security-role-ref>
-		<security-role-ref>
-			<role-name>guest</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>power-user</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>user</role-name>
-		</security-role-ref>
+		<!-- <security-role-ref> -->
+		<!-- <role-name>guest</role-name> -->
+		<!-- </security-role-ref> -->
+		<!-- <security-role-ref> -->
+		<!-- <role-name>power-user</role-name> -->
+		<!-- </security-role-ref> -->
+		<!-- <security-role-ref> -->
+		<!-- <role-name>user</role-name> -->
+		<!-- </security-role-ref> -->
 	</portlet>
 	<portlet>
 		<portlet-name>dang-bai</portlet-name>
 		<display-name>Dang Bai</display-name>
 		<portlet-class>com.thanhnhan.DangBaiPortlet</portlet-class>
+
+<!-- 		<init-param> -->
+<!-- 			<name>contextConfigLocation</name> -->
+<!-- 			<value>/WEB-INF/dangbai-portlet.xml</value> -->
+<!-- 		</init-param> -->
+<!-- 		<init-param> -->
+<!-- 			<name>view-jsp</name> -->
+<!-- 			<value>/html/dangbai/view.jsp</value> -->
+<!-- 		</init-param> -->
 		<init-param>
-			<name>view-template</name>
-			<value>/html/dangbai/view.jsp</value>
+		<name>view-template</name>
+		<value>/html/dangbai/view.jsp</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
@@ -103,7 +112,7 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 	</portlet>
-	
+
 	<portlet>
 		<portlet-name>chi-tiet-san-pham</portlet-name>
 		<display-name>Chi Tiet San Pham</display-name>
@@ -117,6 +126,7 @@
 			<mime-type>text/html</mime-type>
 			<portlet-mode>view</portlet-mode>
 		</supports>
+		<resource-bundle>content.Language</resource-bundle>
 		<portlet-info>
 			<title>Chi Tiet San Pham</title>
 			<short-title>Chi Tiet San Pham</short-title>
@@ -197,7 +207,7 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 	</portlet>
-	
+
 	<portlet>
 		<portlet-name>quan-ly</portlet-name>
 		<display-name>Quan Ly</display-name>
@@ -211,7 +221,7 @@
 			<mime-type>text/html</mime-type>
 			<portlet-mode>view</portlet-mode>
 		</supports>
-		<resource-bundle>content.Language</resource-bundle>
+		<resource-bundle>content.quanly.Language</resource-bundle>
 		<portlet-info>
 			<title>Quan Ly</title>
 			<short-title>Quan Ly</short-title>
@@ -220,15 +230,15 @@
 		<security-role-ref>
 			<role-name>administrator</role-name>
 		</security-role-ref>
-		<security-role-ref>
-			<role-name>guest</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>power-user</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>user</role-name>
-		</security-role-ref>
+		<!-- <security-role-ref> -->
+		<!-- <role-name>guest</role-name> -->
+		<!-- </security-role-ref> -->
+		<!-- <security-role-ref> -->
+		<!-- <role-name>power-user</role-name> -->
+		<!-- </security-role-ref> -->
+		<!-- <security-role-ref> -->
+		<!-- <role-name>user</role-name> -->
+		<!-- </security-role-ref> -->
 	</portlet>
 	<portlet>
 		<portlet-name>quan-ly-tin</portlet-name>
@@ -247,6 +257,41 @@
 		<portlet-info>
 			<title>Quan Ly Tin</title>
 			<short-title>Quan Ly Tin</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>upload</portlet-name>
+		<display-name>Upload</display-name>
+		<portlet-class>com.thanhnhan.Upload</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/upload/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>uploadFolder</name>
+			<value>/</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Upload</title>
+			<short-title>Upload</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>

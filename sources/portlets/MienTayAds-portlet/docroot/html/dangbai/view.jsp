@@ -30,7 +30,7 @@
 	</aui:row>
 	<aui:row class="ui_row">
 		<aui:select label="chon-loai-sp" model="<%=KhuVuc.class%>"
-			id="dang-tin-loaisp" name="loaiSPId" required="true">
+			id="dang-tin-loaisp" name="loaiSPId">
 			<%
 				// lay danh sach LoaiSP trong Database, 
 							// vong lap trong danh sach in ra select các LoaiSP
@@ -108,7 +108,11 @@
 		<aui:input name="diaChi" length="50" placeholder="place-diachi"
 			id="dang-tin-diachi" label="dang-tin-diachi"></aui:input>
 	</aui:row>
+	<aui:row class="ui_row">
+		<%@ include file="./imgupload.jsp" %>
+	</aui:row>
+	
 	<aui:button-row>
-		<aui:button type="submit" value="add" />
+		<aui:button type="submit" value="add" onclick="addSPValidator()"/>
 	</aui:button-row>
 </aui:form>

@@ -30,7 +30,7 @@
 	<%
 		if (listSP == null) {
 	%>
-	Hiện tại không có sản phẩm nào
+		<div class="portlet-msg-error"><liferay-ui:message key="list-empty" /></div>
 	<%
 		} // end if
 		else {

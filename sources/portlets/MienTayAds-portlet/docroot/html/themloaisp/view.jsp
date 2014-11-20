@@ -20,12 +20,10 @@
 </aui:form>
 <liferay-ui:search-container emptyResultsMessage="no-any-loai"
 	delta="10">
-	<%-- 	rowChecker="<%=new com.liferay.portal.kernel.dao.search.RowChecker( --%>
-	<%-- 						renderResponse)%>"> --%>
+
 	<liferay-ui:search-container-results>
 		<%
-			List<LoaiSP> tempResults = ActionUtil
-							.getLoais(renderRequest);
+			List<LoaiSP> tempResults = ActionUtil.getLoais(renderRequest);
 					results = ListUtil.subList(tempResults,
 							searchContainer.getStart(),
 							searchContainer.getEnd());
