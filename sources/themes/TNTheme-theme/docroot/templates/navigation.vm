@@ -1,5 +1,19 @@
 <nav class="$nav_css_class navbar site-navigation" id="navigation" role="navigation">
-	<div class="navbar-inner">
+	<div class="navbar-inner navbar-fixed-top">
+	<div class="wrapper">
+		<div class="site-title">
+				<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+					<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
+
+					<!-- #if ($show_site_name)
+						<span class="site-name" title="#language_format ("go-to-x", [$site_name])">
+							$site_name
+						</span>
+					#end -->
+				</a>
+
+		</div>
+		<div class="navigation-container">
 		<div class="collapse nav-collapse">
 			<ul aria-label="#language ("site-pages")" class="nav nav-collapse" role="menubar">
 				#foreach ($nav_item in $nav_items)
@@ -45,8 +59,11 @@
 						#end
 					</li>
 				#end
+				<li class="">a href="/new-post"</li>
 			</ul>
 		</div>
+		</div> <!-- and div navigation-container -->
+	</div><!-- End div wrapper -->
 	</div>
 </nav>
 

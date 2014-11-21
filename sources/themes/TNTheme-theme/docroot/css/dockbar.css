@@ -200,11 +200,11 @@ $editLayoutPanelWidth: 460px;
 					border-bottom-width: 0;
 
 					> li {
-						background-color: #333;
+						background-color: #0AF;
 
 						> a {
 							color: #FFF;
-							line-height: 31px;
+/* 							#line-height: 31px; */
 
 							&:focus, &:hover {
 								color: #FFF;

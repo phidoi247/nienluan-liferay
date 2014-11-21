@@ -204,5 +204,48 @@
 		.signed-out #_145_navAddControlsNavbarBtn {
 			display: none;
 		}
+		.wrapper{
+		width: 70%;
+		min-width: 480px; 
+		}
 	}
+	
+}
+.aui body{
+	background-color: #E9EAED;
+}
+.aui .container-fluid{
+	margin-top: 70px;
+}
+.wrapper{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 960px;
+		position: relative;
+		width: 70%;
+		min-width: 480px;
+		}
+.navbar-fixed-top{
+	max-height:42px;
+}
+.custom-logo img{
+	width: auto;
+	max-height:60px;
+}
+
+.site-title{
+	background-size: contain;
+	display: block;
+	height: 50px;
+	width: 200px;
+}
+
+.navigation-container{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.columns-2{
+	background-color: #fff;
+	border-radius: 2px;
 }
