@@ -2164,19 +2164,24 @@ body:first-of-type .portlet-content:hover .lfr-icon-actions .taglib-text {
     min-width: 480px; } }
 .aui body {
   background-color: #E9EAED; }
-
-.container-fluid {
+.aui .container-fluid {
   margin-top: 70px; }
 
 .wrapper {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 960px;
   position: relative;
   width: 70%;
   min-width: 480px; }
 
 .navbar-fixed-top {
-  max-height: 42px; }
+  max-height: 42px;
+  background-repeat: repeat-x;
+  background-color: #3b5998;
+  border: 0;
+  border-bottom: 1px solid #133783;
+  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52); }
 
 .custom-logo img {
   width: auto;
@@ -2192,4 +2197,8 @@ body:first-of-type .portlet-content:hover .lfr-icon-actions .taglib-text {
   position: absolute;
   right: 0;
   top: 0; }
+
+.columns-2 {
+  background-color: #fff;
+  border-radius: 2px; }
 

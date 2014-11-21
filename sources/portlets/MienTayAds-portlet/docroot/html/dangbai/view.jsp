@@ -65,7 +65,7 @@
 			id="dang-tin-tieu-de" label="tieu-de-dang-tin"></aui:input>
 	</aui:row>
 	<aui:row class="ui_row">
-		<aui:input type="textarea" cols="80" rows="8" id="dang-tin-desc"
+		<aui:input type="textarea" cols="280" rows="8" id="dang-tin-desc"
 			name="desc" length="1000" placeholder="place-desc"
 			label="desc-dang-tin" />
 	</aui:row>
@@ -79,7 +79,7 @@
 	</aui:row>
 
 	<aui:row class="ui_row">
-		<aui:input type="textarea" cols="80" rows="8" id="dang-tin-van-chuyen"
+		<aui:input type="textarea" cols="180" rows="8" id="dang-tin-van-chuyen"
 			name="desc" length="1000" placeholder="place-van-chuyen"
 			label="van-chuyen-dang-tin" />
 	</aui:row>

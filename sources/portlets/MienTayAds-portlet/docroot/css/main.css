@@ -94,3 +94,95 @@
 	font-weight: bold;
 	text-decoration: none;
 }
+
+/* Chi tiet san pham */
+.detail-right{
+	display: block;
+	width: 73%;
+	position:relative;
+	float: left;
+}
+.clear{
+	clear: both;
+}
+.detail-body{
+	padding: 10px;
+	min-height: 500px;
+	position: relative;
+}
+.detail-body .detail-right{
+		background: #fff;
+		min-height: 500px;
+		border-radius: 3px;
+		border: 1px #337ab7 solid;
+		display: block;
+		position: relative;
+}
+.detail-body .detail-title{
+	padding-left: 10px;
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #337ab7;
+}
+.detail-body .detail-title>h2{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 16px;
+	color: inherit;	
+}
+.detail-body .image{
+	width: 90%;
+	height: 500px;
+	background: #fff
+	
+}
+.detail-body .thao-tac{
+	border-top: 1px #EDEDED solid;
+	padding: 5px 10px;
+}
+.detail-body .thao-tac ul{
+	display: block;
+	clear: both;
+}
+.detail-body .thao-tac ul>li{
+	display: block;
+	float: left;
+	padding: 2px 5px;
+	min-width: 15%;
+	text-align: center;
+}
+.info{
+	border-top: 1px #ccc dashed;
+	display: block;
+	clear: both;
+	font-size: small;
+	font-style: italic;
+}
+.detail-left{
+	display: block;
+	width: 25%;
+	min-width: 120px;
+	position:relative;
+	float: right;
+}
+.contact-box{
+	border-color: #faebcc;
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.contact-box .label-contact{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 14px;
+	padding: 0px 5px;
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+.contact-box .info-contact{
+	padding: 5px;
+}
