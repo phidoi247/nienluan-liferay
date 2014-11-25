@@ -100,25 +100,25 @@ public class SanPhamLocalServiceClpInvoker {
 
 		_methodParameterTypes15 = new String[] { "com.thanhnhan.model.SanPham" };
 
-		_methodName52 = "getBeanIdentifier";
+		_methodName46 = "getBeanIdentifier";
 
-		_methodParameterTypes52 = new String[] {  };
+		_methodParameterTypes46 = new String[] {  };
 
-		_methodName53 = "setBeanIdentifier";
+		_methodName47 = "setBeanIdentifier";
 
-		_methodParameterTypes53 = new String[] { "java.lang.String" };
+		_methodParameterTypes47 = new String[] { "java.lang.String" };
 
-		_methodName58 = "addSP";
+		_methodName52 = "addSP";
 
-		_methodParameterTypes58 = new String[] { "com.thanhnhan.model.SanPham" };
+		_methodParameterTypes52 = new String[] { "com.thanhnhan.model.SanPham" };
 
-		_methodName59 = "getSanPhams";
+		_methodName53 = "getSanPhams";
 
-		_methodParameterTypes59 = new String[] {  };
+		_methodParameterTypes53 = new String[] {  };
 
-		_methodName60 = "getSanPhams";
+		_methodName54 = "getSanPhams";
 
-		_methodParameterTypes60 = new String[] { "int", "int" };
+		_methodParameterTypes54 = new String[] { "int", "int" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -210,30 +210,30 @@ public class SanPhamLocalServiceClpInvoker {
 			return SanPhamLocalServiceUtil.updateSanPham((com.thanhnhan.model.SanPham)arguments[0]);
 		}
 
-		if (_methodName52.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
+		if (_methodName46.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
 			return SanPhamLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName53.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes53, parameterTypes)) {
+		if (_methodName47.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
 			SanPhamLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName58.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes58, parameterTypes)) {
+		if (_methodName52.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
 			return SanPhamLocalServiceUtil.addSP((com.thanhnhan.model.SanPham)arguments[0]);
 		}
 
-		if (_methodName59.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes59, parameterTypes)) {
+		if (_methodName53.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes53, parameterTypes)) {
 			return SanPhamLocalServiceUtil.getSanPhams();
 		}
 
-		if (_methodName60.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes60, parameterTypes)) {
+		if (_methodName54.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes54, parameterTypes)) {
 			return SanPhamLocalServiceUtil.getSanPhams(((Integer)arguments[0]).intValue(),
 				((Integer)arguments[1]).intValue());
 		}
@@ -273,14 +273,14 @@ public class SanPhamLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
+	private String _methodName46;
+	private String[] _methodParameterTypes46;
+	private String _methodName47;
+	private String[] _methodParameterTypes47;
 	private String _methodName52;
 	private String[] _methodParameterTypes52;
 	private String _methodName53;
 	private String[] _methodParameterTypes53;
-	private String _methodName58;
-	private String[] _methodParameterTypes58;
-	private String _methodName59;
-	private String[] _methodParameterTypes59;
-	private String _methodName60;
-	private String[] _methodParameterTypes60;
+	private String _methodName54;
+	private String[] _methodParameterTypes54;
 }

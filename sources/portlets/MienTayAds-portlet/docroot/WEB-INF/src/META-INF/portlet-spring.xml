@@ -10,7 +10,4 @@
 	<bean id="com.thanhnhan.service.SanPhamLocalService" class="com.thanhnhan.service.impl.SanPhamLocalServiceImpl" />
 	<bean id="com.thanhnhan.service.SanPhamService" class="com.thanhnhan.service.impl.SanPhamServiceImpl" />
 	<bean id="com.thanhnhan.service.persistence.SanPhamPersistence" class="com.thanhnhan.service.persistence.SanPhamPersistenceImpl" parent="basePersistence" />
-	<bean id="com.thanhnhan.service.TNOptionsLocalService" class="com.thanhnhan.service.impl.TNOptionsLocalServiceImpl" />
-	<bean id="com.thanhnhan.service.TNOptionsService" class="com.thanhnhan.service.impl.TNOptionsServiceImpl" />
-	<bean id="com.thanhnhan.service.persistence.TNOptionsPersistence" class="com.thanhnhan.service.persistence.TNOptionsPersistenceImpl" parent="basePersistence" />
 </beans>

@@ -13,7 +13,9 @@
 	<model name="com.thanhnhan.model.SanPham">
 		<field name="spId" type="long" />
 		<field name="spName" type="String" />
-		<field name="desc" type="String" />
+		<field name="desc" type="String">
+			<hint name="max-length">3000</hint>
+		</field>
 		<field name="nguoiDang" type="String" />
 		<field name="sdt" type="String" />
 		<field name="diaChi" type="String" />
@@ -26,10 +28,5 @@
 		<field name="loaiNguoiDung" type="int" />
 		<field name="loaiMuaBan" type="int" />
 		<field name="email" type="String" />
-	</model>
-	<model name="com.thanhnhan.model.TNOptions">
-		<field name="id" type="long" />
-		<field name="option_name" type="String" />
-		<field name="value" type="String" />
 	</model>
 </model-hints>

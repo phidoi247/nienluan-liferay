@@ -4,7 +4,7 @@
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
+<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%> --%>
 
 
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
@@ -15,12 +15,17 @@
 
 <portlet:defineObjects />
 <%
-	List<SanPham> listSP;
 	try{
-		int start = Integer.parseInt(PortalUtil.getOriginalServletRequest(request).getParameter("start"));
-		int end = Integer.parseInt(PortalUtil.getOriginalServletRequest(request).getParameter("end"));
+	List<SanPham> listSP;
+	try {
+		int start = Integer.parseInt(PortalUtil
+				.getOriginalServletRequest(request).getParameter(
+						"start"));
+		int end = Integer
+				.parseInt(PortalUtil.getOriginalServletRequest(request)
+						.getParameter("end"));
 		listSP = ActionUtil.getListSPs(start, end);
-	}catch(NumberFormatException e){
+	} catch (NumberFormatException e) {
 		listSP = ActionUtil.getListSPs();
 	}
 	SanPham sp = new SanPhamImpl();
@@ -30,7 +35,10 @@
 	<%
 		if (listSP == null) {
 	%>
-		<div class="portlet-msg-error"><liferay-ui:message key="list-empty" /></div>
+	<div class="portlet-msg-error">
+	dsdsd
+		<liferay-ui:message key="list-empty" />
+	</div>
 	<%
 		} // end if
 		else {
@@ -47,7 +55,11 @@
 			<div class="sp-name panel-title">
 				<%=s.getSpName()%></div>
 			<div class="details">
-				Giá: <span class="sp-gia"> <%=s.getGia()%></span> Đăng<%=s.getNgayDang()%>
+				<div class="giasp">
+					Giá: <span class="sp-gia"> <%=s.getGia()%></span>
+				</div>
+				<div class="time"><%=ActionUtil.printDate(s.getNgayDang().toString())%></div>
+
 			</div>
 		</div>
 		<div class="clear"></div>
@@ -60,25 +72,32 @@
 
 	<%
 		} // end else
+	
 	%>
 </div>
 <%
 	int totals = listSP.size(); //total records
 	//break total records into pages
-// 	int pages = ceil($get_total_rows[0]/$item_per_page);   
+	// 	int pages = ceil($get_total_rows[0]/$item_per_page);   
 
-//create pagination
-// $pagination = '';
-// if($pages > 1)
-// {
-//     $pagination .= '<ul class="paginate">';
-//     for($i = 1; $i<$pages; $i++)
-//     {
-//         $pagination .= '<li><a href="#" class="paginate_click" id="'.$i.'-page">'.$i.'</a></li>';
-//     }
-//     $pagination .= '</ul>';
-// }
+	//create pagination
+	// $pagination = '';
+	// if($pages > 1)
+	// {
+	//     $pagination .= '<ul class="paginate">';
+	//     for($i = 1; $i<$pages; $i++)
+	//     {
+	//         $pagination .= '<li><a href="#" class="paginate_click" id="'.$i.'-page">'.$i.'</a></li>';
+	//     }
+	//     $pagination .= '</ul>';
+	// }
 
-// ?>
-    
+	// ?>
+	}catch(Exception e1){
+		%>
+		<div class="portlet-msg-error">
+			<liferay-ui:message key="list-empty" />
+		</div>
+		<%
+	}
 %>

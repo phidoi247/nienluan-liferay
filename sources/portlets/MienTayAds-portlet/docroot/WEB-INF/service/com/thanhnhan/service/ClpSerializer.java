@@ -28,7 +28,6 @@ import com.liferay.portal.model.BaseModel;
 import com.thanhnhan.model.KhuVucClp;
 import com.thanhnhan.model.LoaiSPClp;
 import com.thanhnhan.model.SanPhamClp;
-import com.thanhnhan.model.TNOptionsClp;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -117,10 +116,6 @@ public class ClpSerializer {
 			return translateInputSanPham(oldModel);
 		}
 
-		if (oldModelClassName.equals(TNOptionsClp.class.getName())) {
-			return translateInputTNOptions(oldModel);
-		}
-
 		return oldModel;
 	}
 
@@ -166,16 +161,6 @@ public class ClpSerializer {
 		return newModel;
 	}
 
-	public static Object translateInputTNOptions(BaseModel<?> oldModel) {
-		TNOptionsClp oldClpModel = (TNOptionsClp)oldModel;
-
-		BaseModel<?> newModel = oldClpModel.getTNOptionsRemoteModel();
-
-		newModel.setModelAttributes(oldClpModel.getModelAttributes());
-
-		return newModel;
-	}
-
 	public static Object translateInput(Object obj) {
 		if (obj instanceof BaseModel<?>) {
 			return translateInput((BaseModel<?>)obj);
@@ -203,10 +188,6 @@ public class ClpSerializer {
 
 		if (oldModelClassName.equals("com.thanhnhan.model.impl.SanPhamImpl")) {
 			return translateOutputSanPham(oldModel);
-		}
-
-		if (oldModelClassName.equals("com.thanhnhan.model.impl.TNOptionsImpl")) {
-			return translateOutputTNOptions(oldModel);
 		}
 
 		return oldModel;
@@ -301,10 +282,6 @@ public class ClpSerializer {
 			return new com.thanhnhan.NoSuchSanPhamException();
 		}
 
-		if (className.equals("com.thanhnhan.NoSuchTNOptionsException")) {
-			return new com.thanhnhan.NoSuchTNOptionsException();
-		}
-
 		return throwable;
 	}
 
@@ -334,16 +311,6 @@ public class ClpSerializer {
 		newModel.setModelAttributes(oldModel.getModelAttributes());
 
 		newModel.setSanPhamRemoteModel(oldModel);
-
-		return newModel;
-	}
-
-	public static Object translateOutputTNOptions(BaseModel<?> oldModel) {
-		TNOptionsClp newModel = new TNOptionsClp();
-
-		newModel.setModelAttributes(oldModel.getModelAttributes());
-
-		newModel.setTNOptionsRemoteModel(oldModel);
 
 		return newModel;
 	}

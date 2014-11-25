@@ -100,29 +100,29 @@ public class KhuVucLocalServiceClpInvoker {
 
 		_methodParameterTypes15 = new String[] { "com.thanhnhan.model.KhuVuc" };
 
-		_methodName52 = "getBeanIdentifier";
+		_methodName46 = "getBeanIdentifier";
 
-		_methodParameterTypes52 = new String[] {  };
+		_methodParameterTypes46 = new String[] {  };
 
-		_methodName53 = "setBeanIdentifier";
+		_methodName47 = "setBeanIdentifier";
 
-		_methodParameterTypes53 = new String[] { "java.lang.String" };
+		_methodParameterTypes47 = new String[] { "java.lang.String" };
 
-		_methodName58 = "addKhuVuc";
+		_methodName52 = "addKhuVuc";
 
-		_methodParameterTypes58 = new String[] { "com.thanhnhan.model.KhuVuc" };
+		_methodParameterTypes52 = new String[] { "com.thanhnhan.model.KhuVuc" };
 
-		_methodName59 = "deleteKV";
+		_methodName53 = "deleteKV";
 
-		_methodParameterTypes59 = new String[] { "long" };
+		_methodParameterTypes53 = new String[] { "long" };
 
-		_methodName60 = "deleteKV";
+		_methodName54 = "deleteKV";
 
-		_methodParameterTypes60 = new String[] { "com.thanhnhan.model.KhuVuc" };
+		_methodParameterTypes54 = new String[] { "com.thanhnhan.model.KhuVuc" };
 
-		_methodName61 = "getKVs";
+		_methodName55 = "getKVs";
 
-		_methodParameterTypes61 = new String[] {  };
+		_methodParameterTypes55 = new String[] {  };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -214,35 +214,35 @@ public class KhuVucLocalServiceClpInvoker {
 			return KhuVucLocalServiceUtil.updateKhuVuc((com.thanhnhan.model.KhuVuc)arguments[0]);
 		}
 
-		if (_methodName52.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
+		if (_methodName46.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
 			return KhuVucLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName53.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes53, parameterTypes)) {
+		if (_methodName47.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
 			KhuVucLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName58.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes58, parameterTypes)) {
+		if (_methodName52.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
 			return KhuVucLocalServiceUtil.addKhuVuc((com.thanhnhan.model.KhuVuc)arguments[0]);
 		}
 
-		if (_methodName59.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes59, parameterTypes)) {
+		if (_methodName53.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes53, parameterTypes)) {
 			return KhuVucLocalServiceUtil.deleteKV(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName60.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes60, parameterTypes)) {
+		if (_methodName54.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes54, parameterTypes)) {
 			return KhuVucLocalServiceUtil.deleteKV((com.thanhnhan.model.KhuVuc)arguments[0]);
 		}
 
-		if (_methodName61.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes61, parameterTypes)) {
+		if (_methodName55.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes55, parameterTypes)) {
 			return KhuVucLocalServiceUtil.getKVs();
 		}
 
@@ -281,16 +281,16 @@ public class KhuVucLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
+	private String _methodName46;
+	private String[] _methodParameterTypes46;
+	private String _methodName47;
+	private String[] _methodParameterTypes47;
 	private String _methodName52;
 	private String[] _methodParameterTypes52;
 	private String _methodName53;
 	private String[] _methodParameterTypes53;
-	private String _methodName58;
-	private String[] _methodParameterTypes58;
-	private String _methodName59;
-	private String[] _methodParameterTypes59;
-	private String _methodName60;
-	private String[] _methodParameterTypes60;
-	private String _methodName61;
-	private String[] _methodParameterTypes61;
+	private String _methodName54;
+	private String[] _methodParameterTypes54;
+	private String _methodName55;
+	private String[] _methodParameterTypes55;
 }

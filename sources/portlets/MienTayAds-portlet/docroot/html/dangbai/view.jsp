@@ -1,9 +1,20 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/init.jsp"%>
-
+<%@ page import="com.mysql.jdbc.MysqlDataTruncation"%>
+<%@ page import="com.liferay.util.PwdGenerator" %>
+<%@ page import="javax.portlet.PortletPreferences;" %>  
 <portlet:defineObjects />
 <portlet:actionURL name="addSP" var="dangBaiUrl" />
+<portlet:actionURL var="editCaseURL" name="upLoadImg" />
+
+
+<%
+String uploadProgressId = PwdGenerator.getPassword(PwdGenerator.KEY3, 4);
+PortletPreferences prefs = renderRequest.getPreferences();
+
+	try {
+%>
 <aui:form action="<%=dangBaiUrl.toString()%>" method="post">
 	<div class="ui_header">
 		<liferay-ui:message key="dang-tin-noi-dung-tin"></liferay-ui:message>
@@ -16,10 +27,10 @@
 			id="dang-tin-khuvuc" name="khuVucId" showEmptyOption="<%=false%>">
 			<%
 				// lay danh sach khu vuc trong Database, 
-							// vong lap trong danh sach in ra select các Khuvuc
-							List<KhuVuc> khuVucList = KhuVucLocalServiceUtil
-									.getKVs();
-							for (KhuVuc kv : khuVucList) {
+								// vong lap trong danh sach in ra select các Khuvuc
+								List<KhuVuc> khuVucList = KhuVucLocalServiceUtil
+										.getKVs();
+								for (KhuVuc kv : khuVucList) {
 			%>
 			<aui:option label="<%=kv.getKhuVucName()%>"
 				value="<%=kv.getKhuVucId()%>"></aui:option>
@@ -33,10 +44,10 @@
 			id="dang-tin-loaisp" name="loaiSPId">
 			<%
 				// lay danh sach LoaiSP trong Database, 
-							// vong lap trong danh sach in ra select các LoaiSP
-							List<LoaiSP> loaiSPList = LoaiSPLocalServiceUtil
-									.getAllLoais();
-							for (LoaiSP loai : loaiSPList) {
+								// vong lap trong danh sach in ra select các LoaiSP
+								List<LoaiSP> loaiSPList = LoaiSPLocalServiceUtil
+										.getAllLoais();
+								for (LoaiSP loai : loaiSPList) {
 			%>
 			<aui:option label="<%=loai.getLoaiSPName()%>"
 				value="<%=loai.getLoaiSPId()%>"></aui:option>
@@ -79,9 +90,9 @@
 	</aui:row>
 
 	<aui:row class="ui_row">
-		<aui:input type="textarea" cols="180" rows="8" id="dang-tin-van-chuyen"
-			name="desc" length="1000" placeholder="place-van-chuyen"
-			label="van-chuyen-dang-tin" />
+		<aui:input type="textarea" cols="180" rows="8"
+			id="dang-tin-van-chuyen" name="desc" maxlength="1000"
+			placeholder="place-van-chuyen" label="van-chuyen-dang-tin" />
 	</aui:row>
 
 	<div class="ui_header">
@@ -92,10 +103,11 @@
 			id="dang-tin-nguoidang" label="dang-tin-nguoidang"></aui:input>
 	</aui:row>
 	<aui:row class="ui_row">
-		<aui:input type="password" name="passWord" length="50" placeholder="place-password"
-			id="dang-tin-password" label="dang-tin-password"></aui:input>
+		<aui:input type="password" name="passWord" length="50"
+			placeholder="place-password" id="dang-tin-password"
+			label="dang-tin-password"></aui:input>
 	</aui:row>
-	
+
 	<aui:row class="ui_row">
 		<aui:input name="sdt" length="50" placeholder="place-sdt"
 			id="dang-tin-sdt" label="dang-tin-sdt"></aui:input>
@@ -108,11 +120,30 @@
 		<aui:input name="diaChi" length="50" placeholder="place-diachi"
 			id="dang-tin-diachi" label="dang-tin-diachi"></aui:input>
 	</aui:row>
-	<aui:row class="ui_row">
-		<%@ include file="./imgupload.jsp" %>
-	</aui:row>
-	
-	<aui:button-row>
-		<aui:button type="submit" value="add" onclick="addSPValidator()"/>
-	</aui:button-row>
+	<!--  Upload  -->
+	<liferay-ui:success key="success"
+		message=" YEAH. Case uploaded successfully!" />
+	<liferay-ui:error key="error"
+		message="Sorry, an error prevented the upload. Please try again." />
+	<liferay-ui:upload-progress id="<%=uploadProgressId.toString()%>" message="uploading"
+		redirect="<%=editCaseURL.toString()%>" />
+	<aui:form action="<%=editCaseURL.toString()%>" enctype="multipart/form-data"
+		method="post">
+		<aui:input type="file" name="fileName" size="75" />
+		<input type="submit" value="<liferay-ui:message key="upload" />"
+			onClick="<%=uploadProgressId.toString()%>.startProgress(); return true;" />
+		<!--  aui:button type="submit" value="Save" /-->
+	</aui:form>
+
+	<!--  Upload  -->
+	<aui:button type="submit" value="add" />
+
 </aui:form>
+<%
+	} catch (MysqlDataTruncation e) {
+%>
+<div class="alert alert-error">Thông tin chi tiết quá dài, vui
+	lòng kiểm tra lại</div>
+<%
+	}
+%>

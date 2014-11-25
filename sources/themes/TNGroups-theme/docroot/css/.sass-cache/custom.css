@@ -1,0 +1,81 @@
+body {
+  background: #FFF; }
+
+.dockbar .navbar-inner {
+  max-height: 42px; }
+
+#navigation {
+  background: #5c9100;
+  height: 33px;
+  opacity: 0.7;
+  vertical-align: middle;
+  /* line-height: 30px; */
+  border-bottom: 1px solid #d0d1d3;
+  /* left: 0; */
+  position: relative;
+  /* top: 0; */
+  /* width: 100%; */
+  z-index: 100;
+  min-height: 53px; }
+
+#navigation ul li {
+  list-style: none; }
+
+#navigation ul li.selected a, #navigation ul li a:hover {
+  background-color: #009000; }
+
+#navigation ul {
+  margin: 0;
+  min-height: inherit; }
+
+#navigation ul li a {
+  display: block;
+  width: 10%;
+  position: relative;
+  float: left;
+  text-decoration: none;
+  /* list-style: none; */
+  /* font-weight: bold; */
+  font-size: larger;
+  border-right: 1px #99D57C solid;
+  color: #FFF;
+  padding: 16px 14px; }
+
+.wrapper {
+  width: 70%;
+  max-width: 980px;
+  min-width: 480px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#content {
+  background-color: #f7f7f7;
+  padding: 10px 25px 30px 10px;
+  margin: 0 auto 25px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }
+
+.user-avatar img {
+  max-height: 22px; }
+
+.portlet-login {
+  background-color: #FFF;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  width: 304px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }
+
+#portlet_dangbai_WAR_MienTayAdsportlet .aui input,
+#portlet_dangbai_WAR_MienTayAdsportlet .aui textarea,
+#portlet_dangbai_WAR_MienTayAdsportlet .aui .uneditable-input {
+  width: 90%; }
+

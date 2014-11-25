@@ -15,7 +15,7 @@
 package com.thanhnhan.model.impl;
 
 /**
- * The extended model implementation for the SanPham service. Represents a row in the &quot;loaiSP_SanPham&quot; database table, with each column mapped to a property of this class.
+ * The extended model implementation for the SanPham service. Represents a row in the &quot;MienTayAds_SanPham&quot; database table, with each column mapped to a property of this class.
  *
  * <p>
  * Helper methods and all application logic should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the {@link com.thanhnhan.model.SanPham} interface.

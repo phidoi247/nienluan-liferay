@@ -38,6 +38,6 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="javax.portlet.PortletURL"%>
 <!-- jQuery -->
-<script src="<%=request.getContextPath().toString() %>/js/jquery-2.1.1.min.js"></script>
-
+<script type="text/javascript" src="<%=request.getContextPath().toString() %>/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath().toString() %>/js/main.js"></script>
 <portlet:defineObjects />

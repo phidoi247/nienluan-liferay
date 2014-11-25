@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
-<service-builder package-path="com.thanhnhan"
-	auto-namespace-tables="true">
+<service-builder package-path="com.thanhnhan" auto-namespace-tables="true">
 	<author>ThanhNhan</author>
 	<namespace>MienTayAds</namespace>
 	<entity name="LoaiSP" local-service="true">
@@ -15,72 +14,30 @@
 			<finder-column name="loaiSPName" />
 		</finder>
 	</entity>
-	<entity name="SanPham" local-service="true">
-		<column name="spId" primary="true" type="long"></column>
-		<column name="spName" type="String"></column>
-		<column name="desc" type="String"></column>
-		<column name="nguoiDang" type="String"></column>
-		<column name="sdt" type="String"></column>
-		<column name="diaChi" type="String"></column>
-		<column name="gia" type="String"></column>
-		<column name="ngayDang" type="Date"></column>
-		<column name="image" type="String"></column>
-		<column name="loaiSPId" type="long"></column>
-		<column name="khuVucId" type="long"></column>
-		<column name="passWord" type="String"></column>
-		<column name="loaiNguoiDung" type="int"></column>
-		<column name="loaiMuaBan" type="int"></column>
-		<column name="email" type="String"></column>
-
-
-		<!-- PK fields -->
-
-		<column name="sanPhamId" type="long" primary="true"></column>
-
-		<!-- Group instance -->
-
-		<column name="groupId" type="long"></column>
-
-		<!-- Audit fields -->
-
-		<column name="companyId" type="long"></column>
-		<column name="userId" type="long"></column>
-		<column name="userName" type="String"></column>
-		<column name="createDate" type="Date"></column>
-		<column name="modifiedDate" type="Date"></column>
-
-
-		<!-- PK fields -->
-
-		<column name="sanPhamId" type="long" primary="true"></column>
-
-		<!-- Group instance -->
-
-		<column name="groupId" type="long"></column>
-
-		<!-- Audit fields -->
-
-		<column name="companyId" type="long"></column>
-		<column name="userId" type="long"></column>
-		<column name="userName" type="String"></column>
-		<column name="createDate" type="Date"></column>
-		<column name="modifiedDate" type="Date"></column>
-	</entity>
-	<entity name="KhuVuc" local-service="true">
-		<column name="id" type="long" primary="true" id-type="increment"></column>
-		<column name="khuVucId" type="String"></column>
-		<column name="khuVucName" type="String"></column>
-		<finder name="KhuVucId" return-type="KhuVuc" unique="true">
-			<finder-column name="khuVucId" />
-		</finder>
-
-	</entity>
-	<entity name="TNOptions" local-service="true">
-		<column name="id" type="long" primary="true" id-type="increment"></column>
-		<column name="option_name" type="String"></column>
-		<column name="value" type="String"></column>
-		<finder name="id" return-type="TNOptions" unique="true">
-			<finder-column name="id" />
-		</finder>
-	</entity>
+    <entity name="SanPham" local-service="true">
+        <column name="spId" primary="true" type="long"></column>
+        <column name="spName" type="String"></column>
+        <column name="desc" type="String"></column>
+        <column name="nguoiDang" type="String"></column>
+        <column name="sdt" type="String"></column>
+        <column name="diaChi" type="String"></column>
+        <column name="gia" type="String"></column>
+        <column name="ngayDang" type="Date"></column>
+        <column name="image" type="String"></column>
+        <column name="loaiSPId" type="long"></column>
+        <column name="khuVucId" type="long"></column>
+        <column name="passWord" type="String"></column>
+        <column name="loaiNguoiDung" type="int"></column>
+        <column name="loaiMuaBan" type="int"></column>
+        <column name="email" type="String"></column>
+    </entity>
+    <entity name="KhuVuc" local-service="true" >
+        <column name="id" type="long" primary="true" id-type="increment"></column>
+        <column name="khuVucId" type="String" ></column>
+        <column name="khuVucName" type="String"></column>
+        <finder name="KhuVucId" return-type="KhuVuc" unique="true">
+            <finder-column name="khuVucId" />
+        </finder>
+        
+    </entity>
 </service-builder>

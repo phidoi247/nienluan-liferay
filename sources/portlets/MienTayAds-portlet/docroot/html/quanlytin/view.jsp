@@ -3,13 +3,11 @@
 
 <h3>Quản lý Sản Phẩm</h3>
 
-<liferay-ui:search-container emptyResultsMessage="no-any-kv" delta="10">
+<liferay-ui:search-container emptyResultsMessage="no-any-sp" delta="10">
 	<liferay-ui:search-container-results>
 		<%
 			List<SanPham> tempResults = ActionUtil.getListSPs();
-					results = ListUtil.subList(tempResults,
-							searchContainer.getStart(),
-							searchContainer.getEnd());
+					results = ListUtil.subList(tempResults,searchContainer.getStart(),searchContainer.getEnd());
 					total = tempResults.size();
 					pageContext.setAttribute("results", results);
 					pageContext.setAttribute("total", total);
