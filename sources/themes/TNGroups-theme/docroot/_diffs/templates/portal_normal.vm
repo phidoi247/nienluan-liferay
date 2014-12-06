@@ -22,9 +22,9 @@ $theme.include($body_top_include)
 	#dockbar()
 #end
 
-<div class="container-fluid wrapper">
+<div class="main">
 	<header id="banner" role="banner">
-		<div id="heading">
+		<div id="heading" class="wrapper">
 			<h1 class="site-title">
 				<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
 					<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
@@ -42,6 +42,9 @@ $theme.include($body_top_include)
 				<span>$the_title</span>
 				</h2>
 			-->
+			#if ($has_navigation || $is_signed_in)
+				#parse ("$full_templates_path/navigation.vm")
+			#end
 		</div>
 
 		#if (!$is_signed_in)
@@ -52,12 +55,10 @@ $theme.include($body_top_include)
 			</div>
 		#end
 
-		#if ($has_navigation || $is_signed_in)
-			#parse ("$full_templates_path/navigation.vm")
-		#end
+		
 	</header>
 
-	<div id="content">
+	<div id="content" class="wrapper">
 		<!-- <nav id="breadcrumbs">#breadcrumbs()</nav>
 		 -->
 		#if ($selectable)
