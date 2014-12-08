@@ -176,37 +176,7 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 	</portlet>
-	<portlet>
-		<portlet-name>search-sp</portlet-name>
-		<display-name>Search Sp</display-name>
-		<portlet-class>com.thanhnhantn.SearchSP</portlet-class>
-		<init-param>
-			<name>view-template</name>
-			<value>/html/searchsp/view.jsp</value>
-		</init-param>
-		<expiration-cache>0</expiration-cache>
-		<supports>
-			<mime-type>text/html</mime-type>
-			<portlet-mode>view</portlet-mode>
-		</supports>
-		<portlet-info>
-			<title>Search Sp</title>
-			<short-title>Search Sp</short-title>
-			<keywords></keywords>
-		</portlet-info>
-		<security-role-ref>
-			<role-name>administrator</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>guest</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>power-user</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>user</role-name>
-		</security-role-ref>
-	</portlet>
+	
 
 	<portlet>
 		<portlet-name>quan-ly</portlet-name>
@@ -272,26 +242,24 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 	</portlet>
+	
 	<portlet>
-		<portlet-name>upload</portlet-name>
-		<display-name>Upload</display-name>
-		<portlet-class>com.thanhnhan.Upload</portlet-class>
+		<portlet-name>duyet-bai</portlet-name>
+		<display-name>Duyet Bai</display-name>
+		<portlet-class>com.thanhnhan.DuyetBai</portlet-class>
 		<init-param>
 			<name>view-template</name>
-			<value>/html/upload/view.jsp</value>
-		</init-param>
-		<init-param>
-			<name>uploadFolder</name>
-			<value>/</value>
+			<value>/html/duyetbai/view.jsp</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
 			<mime-type>text/html</mime-type>
 			<portlet-mode>view</portlet-mode>
 		</supports>
+		<resource-bundle>content.Language</resource-bundle>
 		<portlet-info>
-			<title>Upload</title>
-			<short-title>Upload</short-title>
+			<title>Duyet Bai</title>
+			<short-title>Duyet Bai</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>

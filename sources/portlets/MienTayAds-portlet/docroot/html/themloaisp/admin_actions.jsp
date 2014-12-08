@@ -13,7 +13,7 @@
 	</portlet:actionURL>
 	<liferay-ui:icon image="edit" message="Edit"
 		url="<%=editURL.toString()%>" />
-	<portlet:actionURL name="com.thanhnhantn.com.deleteLoaiSP" var="deleteURL">
+	<portlet:actionURL name="deleteLoaiSP" var="deleteURL">
 		<portlet:param name="resourcePrimKey" value="<%=primKey%>" />
 	</portlet:actionURL>
 	<liferay-ui:icon-delete url="<%=deleteURL.toString()%>" />

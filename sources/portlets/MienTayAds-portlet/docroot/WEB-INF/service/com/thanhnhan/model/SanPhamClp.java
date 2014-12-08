@@ -83,11 +83,12 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 		attributes.put("ngayDang", getNgayDang());
 		attributes.put("image", getImage());
 		attributes.put("loaiSPId", getLoaiSPId());
-		attributes.put("khuVucId", getKhuVucId());
 		attributes.put("passWord", getPassWord());
 		attributes.put("loaiNguoiDung", getLoaiNguoiDung());
 		attributes.put("loaiMuaBan", getLoaiMuaBan());
 		attributes.put("email", getEmail());
+		attributes.put("kVid", getKVid());
+		attributes.put("Status", getStatus());
 
 		return attributes;
 	}
@@ -154,12 +155,6 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 			setLoaiSPId(loaiSPId);
 		}
 
-		Long khuVucId = (Long)attributes.get("khuVucId");
-
-		if (khuVucId != null) {
-			setKhuVucId(khuVucId);
-		}
-
 		String passWord = (String)attributes.get("passWord");
 
 		if (passWord != null) {
@@ -182,6 +177,18 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 
 		if (email != null) {
 			setEmail(email);
+		}
+
+		Long kVid = (Long)attributes.get("kVid");
+
+		if (kVid != null) {
+			setKVid(kVid);
+		}
+
+		Integer Status = (Integer)attributes.get("Status");
+
+		if (Status != null) {
+			setStatus(Status);
 		}
 	}
 
@@ -416,29 +423,6 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 	}
 
 	@Override
-	public long getKhuVucId() {
-		return _khuVucId;
-	}
-
-	@Override
-	public void setKhuVucId(long khuVucId) {
-		_khuVucId = khuVucId;
-
-		if (_sanPhamRemoteModel != null) {
-			try {
-				Class<?> clazz = _sanPhamRemoteModel.getClass();
-
-				Method method = clazz.getMethod("setKhuVucId", long.class);
-
-				method.invoke(_sanPhamRemoteModel, khuVucId);
-			}
-			catch (Exception e) {
-				throw new UnsupportedOperationException(e);
-			}
-		}
-	}
-
-	@Override
 	public String getPassWord() {
 		return _passWord;
 	}
@@ -530,6 +514,52 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 		}
 	}
 
+	@Override
+	public long getKVid() {
+		return _kVid;
+	}
+
+	@Override
+	public void setKVid(long kVid) {
+		_kVid = kVid;
+
+		if (_sanPhamRemoteModel != null) {
+			try {
+				Class<?> clazz = _sanPhamRemoteModel.getClass();
+
+				Method method = clazz.getMethod("setKVid", long.class);
+
+				method.invoke(_sanPhamRemoteModel, kVid);
+			}
+			catch (Exception e) {
+				throw new UnsupportedOperationException(e);
+			}
+		}
+	}
+
+	@Override
+	public int getStatus() {
+		return _Status;
+	}
+
+	@Override
+	public void setStatus(int Status) {
+		_Status = Status;
+
+		if (_sanPhamRemoteModel != null) {
+			try {
+				Class<?> clazz = _sanPhamRemoteModel.getClass();
+
+				Method method = clazz.getMethod("setStatus", int.class);
+
+				method.invoke(_sanPhamRemoteModel, Status);
+			}
+			catch (Exception e) {
+				throw new UnsupportedOperationException(e);
+			}
+		}
+	}
+
 	public BaseModel<?> getSanPhamRemoteModel() {
 		return _sanPhamRemoteModel;
 	}
@@ -609,11 +639,12 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 		clone.setNgayDang(getNgayDang());
 		clone.setImage(getImage());
 		clone.setLoaiSPId(getLoaiSPId());
-		clone.setKhuVucId(getKhuVucId());
 		clone.setPassWord(getPassWord());
 		clone.setLoaiNguoiDung(getLoaiNguoiDung());
 		clone.setLoaiMuaBan(getLoaiMuaBan());
 		clone.setEmail(getEmail());
+		clone.setKVid(getKVid());
+		clone.setStatus(getStatus());
 
 		return clone;
 	}
@@ -662,7 +693,7 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(31);
+		StringBundler sb = new StringBundler(33);
 
 		sb.append("{spId=");
 		sb.append(getSpId());
@@ -684,8 +715,6 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 		sb.append(getImage());
 		sb.append(", loaiSPId=");
 		sb.append(getLoaiSPId());
-		sb.append(", khuVucId=");
-		sb.append(getKhuVucId());
 		sb.append(", passWord=");
 		sb.append(getPassWord());
 		sb.append(", loaiNguoiDung=");
@@ -694,6 +723,10 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 		sb.append(getLoaiMuaBan());
 		sb.append(", email=");
 		sb.append(getEmail());
+		sb.append(", kVid=");
+		sb.append(getKVid());
+		sb.append(", Status=");
+		sb.append(getStatus());
 		sb.append("}");
 
 		return sb.toString();
@@ -701,7 +734,7 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 
 	@Override
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(49);
+		StringBundler sb = new StringBundler(52);
 
 		sb.append("<model><model-name>");
 		sb.append("com.thanhnhan.model.SanPham");
@@ -748,10 +781,6 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 		sb.append(getLoaiSPId());
 		sb.append("]]></column-value></column>");
 		sb.append(
-			"<column><column-name>khuVucId</column-name><column-value><![CDATA[");
-		sb.append(getKhuVucId());
-		sb.append("]]></column-value></column>");
-		sb.append(
 			"<column><column-name>passWord</column-name><column-value><![CDATA[");
 		sb.append(getPassWord());
 		sb.append("]]></column-value></column>");
@@ -766,6 +795,14 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 		sb.append(
 			"<column><column-name>email</column-name><column-value><![CDATA[");
 		sb.append(getEmail());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>kVid</column-name><column-value><![CDATA[");
+		sb.append(getKVid());
+		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>Status</column-name><column-value><![CDATA[");
+		sb.append(getStatus());
 		sb.append("]]></column-value></column>");
 
 		sb.append("</model>");
@@ -783,10 +820,11 @@ public class SanPhamClp extends BaseModelImpl<SanPham> implements SanPham {
 	private Date _ngayDang;
 	private String _image;
 	private long _loaiSPId;
-	private long _khuVucId;
 	private String _passWord;
 	private int _loaiNguoiDung;
 	private int _loaiMuaBan;
 	private String _email;
+	private long _kVid;
+	private int _Status;
 	private BaseModel<?> _sanPhamRemoteModel;
 }

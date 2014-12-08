@@ -1,0 +1,7 @@
+<classpath>
+  <container id="MienTayAds-portlet!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/Github/nienluan-liferay/sources/portlets/MienTayAds-portlet/docroot/WEB-INF/lib/MienTayAds-portlet-service.jar">
+      <source-attachment-path>/MienTayAds-portlet/docroot/WEB-INF/service</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

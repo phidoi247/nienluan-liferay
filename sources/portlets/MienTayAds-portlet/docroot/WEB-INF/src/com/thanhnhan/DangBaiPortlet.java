@@ -1,20 +1,15 @@
 package com.thanhnhan;
 
-import java.io.BufferedInputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.util.Date;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
+import javax.portlet.PortletSession;
 
 import com.liferay.portal.kernel.exception.SystemException;
-import com.liferay.portal.kernel.servlet.SessionErrors;
-import com.liferay.portal.kernel.servlet.SessionMessages;
 import com.liferay.portal.kernel.upload.UploadPortletRequest;
+import com.liferay.portal.kernel.util.Base64;
 import com.liferay.portal.kernel.util.FileUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.util.PortalUtil;
@@ -29,8 +24,63 @@ public class DangBaiPortlet extends MVCPortlet {
 	public void addSP(ActionRequest request, ActionResponse response)
 			throws SystemException {
 		SanPham sp = ActionUtil.SanPhamFromRequest(request);
-		SanPhamLocalServiceUtil.addSP(sp);
+		UploadPortletRequest ureq = PortalUtil.getUploadPortletRequest(request);
+		sp.setSpName(ureq.getParameter("spName"));
+		sp.setDesc(ureq.getParameter("desc"));
+		sp.setNguoiDang(ureq.getParameter("nguoiDang"));
+		sp.setSdt(ureq.getParameter("sdt"));
+		sp.setDiaChi(ureq.getParameter("diaChi"));
+		sp.setGia(ureq.getParameter("gia"));
+		sp.setNgayDang(new Date());
+		sp.setLoaiSPId(Long.parseLong(ureq.getParameter("loaiSPId")));
+		sp.setPassWord(ureq.getParameter("passWord"));
+		sp.setLoaiNguoiDung(Integer.parseInt(ureq.getParameter("loaiNguoiDung")));
+		sp.setLoaiMuaBan(Integer.parseInt(ureq.getParameter("loaiMuaBan")));
+		sp.setEmail(ureq.getParameter("email"));
+		sp.setKVid(Long.parseLong(ureq.getParameter("khuVucId")));
+		sp.setStatus(0);
+		// upload file
+		File[] file = ureq.getFiles("images");
+		String imgs = "";
+		for (File f : file) {
+			byte[] bt;
+			try {
+				bt = FileUtil.getBytes(f);
+				imgs += "imgs_" + (Base64.objectToString(bt));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		sp.setImage(imgs);
+		SanPhamLocalServiceUtil.addSP(sp); // add san pham vao database
+
 	}
+
+	// public void dangSP(ActionRequest request, ActionResponse response)
+	// throws SystemException {
+	// SanPham sp = ActionUtil.SanPhamFromRequest(request);
+	// /**
+	// * Upload images
+	// */
+	// UploadPortletRequest ureq = PortalUtil.getUploadPortletRequest(request);
+	// File[] file = ureq.getFiles("images");
+	// String imgs = "";
+	// for (File f : file) {
+	// byte[] bt;
+	// try {
+	// bt = FileUtil.getBytes(f);
+	// imgs += "imgs_" + (Base64.objectToString(bt));
+	// } catch (Exception e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+	// }
+	// sp.setImage(imgs);
+	// request.setAttribute("sp", sp);
+	// response.setRenderParameter("mvcPath", "/html/dangbai/upanh.jsp");
+	//
+	// }
 
 	public void editSP(ActionRequest request, ActionResponse response)
 			throws Exception {
@@ -38,69 +88,6 @@ public class DangBaiPortlet extends MVCPortlet {
 		SanPham sp = SanPhamLocalServiceUtil.getSanPham(spid);
 		request.setAttribute("sp", sp);
 		response.setRenderParameter("mvcPath", "/html/listsanpham/edit_sp.jsp");
-	}
-
-	public void upLoadImg(ActionRequest actionRequest, ActionResponse actionResponse) throws Exception
-	{
-//		LinkedList<FileMeta> files = new LinkedList<FileMeta>();
-		String folder = getInitParameter("uploadFolder");
-		String realPath = getPortletContext().getRealPath("/");
-
-		System.out.println("RealPath" + realPath + " UploadFolder :" + folder);
-		try {
-//			logger.info("Siamo nel try");
-			UploadPortletRequest uploadRequest = PortalUtil
-					.getUploadPortletRequest(actionRequest);
-			System.out.println("Size: " + uploadRequest.getSize("fileName"));
-
-			if (uploadRequest.getSize("fileName") == 0) {
-				SessionErrors.add(actionRequest, "error");
-			}
-
-			String sourceFileName = uploadRequest.getFileName("fileName");
-			File file = uploadRequest.getFile("fileName");
-
-			System.out.println("Nome file:" + uploadRequest.getFileName("fileName"));
-			File newFile = null;
-			newFile = new File(folder + sourceFileName);
-			System.out.println("New file name: " + newFile.getName());
-			System.out.println("New file path: " + newFile.getPath());
-			InputStream in = new BufferedInputStream(
-					uploadRequest.getFileAsStream("fileName"));
-			FileInputStream fis = new FileInputStream(file);
-			FileOutputStream fos = new FileOutputStream(newFile);
-
-			byte[] bytes_ = FileUtil.getBytes(in);
-			int i = fis.read(bytes_);
-
-			while (i != -1) {
-				fos.write(bytes_, 0, i);
-				i = fis.read(bytes_);
-			}
-			fis.close();
-			fos.close();
-			Float size = (float) newFile.length();
-			System.out.println("file size bytes:" + size);
-			System.out.println("file size Mb:" + size / 1048576);
-
-			System.out.println("File created: " + newFile.getName());
-			SessionMessages.add(actionRequest, "success");
-
-		} catch (FileNotFoundException e) {
-			System.out.println("File Not Found.");
-			e.printStackTrace();
-			SessionMessages.add(actionRequest, "error");
-		} catch (NullPointerException e) {
-			System.out.println("File Not Found");
-			e.printStackTrace();
-			SessionMessages.add(actionRequest, "error");
-		}
-
-		catch (IOException e1) {
-			System.out.println("Error Reading The File.");
-			SessionMessages.add(actionRequest, "error");
-			e1.printStackTrace();
-		}
 	}
 
 }

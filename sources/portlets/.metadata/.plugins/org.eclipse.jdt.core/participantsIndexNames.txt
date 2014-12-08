@@ -1,0 +1,21 @@
+INDEX VERSION 1.127
+D:\Liferay\liferay-plugins-sdk-6.2\portlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2199923449.index
+\MienTayAds-portlet\docroot\WEB-INF\src
+D:\Liferay\liferay-plugins-sdk-6.2\portlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\436057869.index
+\MienTayAds-portlet\docroot\WEB-INF\src
+D:\Liferay\liferay-plugins-sdk-6.2\portlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\886497625.index
+\MienTayAds-portlet\docroot\WEB-INF\src
+D:\Liferay\liferay-plugins-sdk-6.2\portlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3773002291.index
+\MienTayAds-portlet\docroot\WEB-INF\src
+D:\Liferay\liferay-plugins-sdk-6.2\portlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2964027056.index
+\MienTayAds-portlet\docroot\WEB-INF\src
+D:\Liferay\liferay-plugins-sdk-6.2\portlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1304590331.index
+\MienTayAds-portlet\docroot\WEB-INF\src
+D:\Liferay\liferay-plugins-sdk-6.2\portlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\819549661.index
+\MienTayAds-portlet\docroot\WEB-INF\src
+D:\Liferay\liferay-plugins-sdk-6.2\portlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2596463636.index
+\MienTayAds-portlet\docroot\WEB-INF\src
+D:\Liferay\liferay-plugins-sdk-6.2\portlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1726690098.index
+\MienTayAds-portlet\docroot\WEB-INF\src
+D:\Liferay\liferay-plugins-sdk-6.2\portlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2526158635.index
+\MienTayAds-portlet\docroot\WEB-INF\src

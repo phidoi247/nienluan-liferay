@@ -46,27 +46,27 @@ public class KhuVucLocalServiceWrapper implements KhuVucLocalService,
 	/**
 	* Creates a new khu vuc with the primary key. Does not add the khu vuc to the database.
 	*
-	* @param id the primary key for the new khu vuc
+	* @param kVid the primary key for the new khu vuc
 	* @return the new khu vuc
 	*/
 	@Override
-	public com.thanhnhan.model.KhuVuc createKhuVuc(long id) {
-		return _khuVucLocalService.createKhuVuc(id);
+	public com.thanhnhan.model.KhuVuc createKhuVuc(long kVid) {
+		return _khuVucLocalService.createKhuVuc(kVid);
 	}
 
 	/**
 	* Deletes the khu vuc with the primary key from the database. Also notifies the appropriate model listeners.
 	*
-	* @param id the primary key of the khu vuc
+	* @param kVid the primary key of the khu vuc
 	* @return the khu vuc that was removed
 	* @throws PortalException if a khu vuc with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
 	@Override
-	public com.thanhnhan.model.KhuVuc deleteKhuVuc(long id)
+	public com.thanhnhan.model.KhuVuc deleteKhuVuc(long kVid)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
-		return _khuVucLocalService.deleteKhuVuc(id);
+		return _khuVucLocalService.deleteKhuVuc(kVid);
 	}
 
 	/**
@@ -180,24 +180,24 @@ public class KhuVucLocalServiceWrapper implements KhuVucLocalService,
 	}
 
 	@Override
-	public com.thanhnhan.model.KhuVuc fetchKhuVuc(long id)
+	public com.thanhnhan.model.KhuVuc fetchKhuVuc(long kVid)
 		throws com.liferay.portal.kernel.exception.SystemException {
-		return _khuVucLocalService.fetchKhuVuc(id);
+		return _khuVucLocalService.fetchKhuVuc(kVid);
 	}
 
 	/**
 	* Returns the khu vuc with the primary key.
 	*
-	* @param id the primary key of the khu vuc
+	* @param kVid the primary key of the khu vuc
 	* @return the khu vuc
 	* @throws PortalException if a khu vuc with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
 	@Override
-	public com.thanhnhan.model.KhuVuc getKhuVuc(long id)
+	public com.thanhnhan.model.KhuVuc getKhuVuc(long kVid)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
-		return _khuVucLocalService.getKhuVuc(id);
+		return _khuVucLocalService.getKhuVuc(kVid);
 	}
 
 	@Override

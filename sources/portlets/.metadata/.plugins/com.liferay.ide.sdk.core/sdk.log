@@ -1,0 +1,29 @@
+Buildfile: D:\Github\nienluan-liferay\sources\portlets\MienTayAds-portlet\build.xml
+build-service:
+      [jar] Building MANIFEST-only jar: D:\Github\nienluan-liferay\sources\portlets\MienTayAds-portlet\build-service-classpath.jar
+   [delete] Deleting: D:\Github\nienluan-liferay\sources\portlets\MienTayAds-portlet\build-service-classpath.jar.manifest
+   [delete] Deleting: D:\Github\nienluan-liferay\sources\portlets\MienTayAds-portlet\build-service-classpath.jar
+     [echo] Loading jar:file:/D:/Liferay/bundles/tomcat-7.0.42/webapps/ROOT/WEB-INF/lib/portal-impl.jar!/system.properties
+     [echo] Loading jar:file:/D:/Liferay/bundles/tomcat-7.0.42/webapps/ROOT/WEB-INF/lib/portal-impl.jar!/portal.properties
+     [echo] Loading jar:file:/D:/Liferay/bundles/tomcat-7.0.42/webapps/ROOT/WEB-INF/lib/portal-impl.jar!/com/liferay/portal/tools/dependencies/portal-tools.properties
+     [echo] Building KhuVuc
+     [echo] Writing D:\Github\nienluan-liferay\sources\portlets\MienTayAds-portlet\docroot\WEB-INF\service\com\thanhnhan\model\KhuVuc.java
+     [echo] Building LoaiSP
+     [echo] Building SanPham
+     [echo] Building TNOptions
+     [echo] Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+    [javac] Compiling 17 source files to D:\Github\nienluan-liferay\sources\portlets\MienTayAds-portlet\docroot\WEB-INF\service-classes
+    [javac] Annotation processing got disabled, since it requires a 1.6 compliant JVM
+    [javac] ----------
+    [javac] 1. ERROR in D:\Github\nienluan-liferay\sources\portlets\MienTayAds-portlet\docroot\WEB-INF\service\com\thanhnhan\model\KhuVuc.java (at line 0)
+    [javac] 	/**
+    [javac] 	^
+    [javac] The type java.util.Map$Entry cannot be resolved. It is indirectly referenced from required .class files
+    [javac] ----------
+    [javac] 1 problem (1 error)
+
+BUILD FAILED
+D:\Github\nienluan-liferay\sources\build-common-plugin.xml:262: The following error occurred while executing this line:
+D:\Github\nienluan-liferay\sources\build-common.xml:634: Compile failed; see the compiler error output for details.
+
+Total time: 21 seconds

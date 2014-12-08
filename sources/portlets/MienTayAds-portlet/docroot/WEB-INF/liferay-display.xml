@@ -5,7 +5,6 @@
 
 	<category name="category.sample">
 
-		<portlet id="upload"></portlet>
 	</category>
 	<category name="category.raovat-app">
 		<portlet id="dang-bai"></portlet>
@@ -18,5 +17,6 @@
 		<portlet id="quan-ly-kv"></portlet>
 		<portlet id="quan-ly"></portlet>
 		<portlet id="quan-ly-tin"></portlet>
+		<portlet id="duyet-bai"></portlet>
 	</category>
 </display>

@@ -42,17 +42,17 @@ public class CategoryManager extends MVCPortlet {
 //				"/html/themloaisp/edit_loaisp.jsp");
 //	}
 //
-//	public void updateLoaiSP(ActionRequest request, ActionResponse response)
-//			throws Exception {
-//		long loaiSPId = ParamUtil.getLong(request, "resourcePrimKey");
-//		//ArrayList<String> err = new ArrayList<String>();
-//		LoaiSP loai = LoaiSPLocalServiceUtil.getLoaiSP(loaiSPId);
-//		LoaiSP requestLoai = ActionUtil.loaiSPFromRequest(request);
-//		loai.setLoaiSPId(requestLoai.getLoaiSPId());
-//		loai.setLoaiSPName(requestLoai.getLoaiSPName());
-//		LoaiSPLocalServiceUtil.updateLoaiSP(loai);
-//		SessionMessages.add(request, "loaiUpdated");
-//	}
+	public void updateLoaiSP(ActionRequest request, ActionResponse response)
+			throws Exception {
+		long loaiSPId = ParamUtil.getLong(request, "resourcePrimKey");
+		//ArrayList<String> err = new ArrayList<String>();
+		LoaiSP loai = LoaiSPLocalServiceUtil.getLoaiSP(loaiSPId);
+		LoaiSP requestLoai = ActionUtil.loaiSPFromRequest(request);
+		loai.setLoaiSPId(requestLoai.getLoaiSPId());
+		loai.setLoaiSPName(requestLoai.getLoaiSPName());
+		LoaiSPLocalServiceUtil.updateLoaiSP(loai);
+		response.setRenderParameter("mvcPath","/html/quanly/view.jsp?tabs1=Quản lý Danh Mục");
+	}
 //
 //	public void deleteLoaiSP(ActionRequest request, ActionResponse response)
 //			throws Exception {

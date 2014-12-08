@@ -7,7 +7,8 @@
 	<liferay-ui:search-container-results>
 		<%
 			List<SanPham> tempResults = ActionUtil.getListSPs();
-					results = ListUtil.subList(tempResults,searchContainer.getStart(),searchContainer.getEnd());
+					results = ListUtil.subList(tempResults,searchContainer.getStart(),
+							searchContainer.getEnd());
 					total = tempResults.size();
 					pageContext.setAttribute("results", results);
 					pageContext.setAttribute("total", total);
@@ -25,7 +26,7 @@
 			property="spName" orderable="true" />
 		
 		<liferay-ui:search-container-column-jsp name="thao-tac"
-			path="/html/quanlysp/admin_actions.jsp" />
+			path="/html/quanlytin/admin_actions.jsp" />
 	</liferay-ui:search-container-row>
 	<liferay-ui:search-iterator />
 </liferay-ui:search-container>

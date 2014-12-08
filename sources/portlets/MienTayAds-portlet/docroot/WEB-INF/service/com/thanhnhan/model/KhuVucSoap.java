@@ -30,7 +30,7 @@ public class KhuVucSoap implements Serializable {
 	public static KhuVucSoap toSoapModel(KhuVuc model) {
 		KhuVucSoap soapModel = new KhuVucSoap();
 
-		soapModel.setId(model.getId());
+		soapModel.setKVid(model.getKVid());
 		soapModel.setKhuVucId(model.getKhuVucId());
 		soapModel.setKhuVucName(model.getKhuVucName());
 
@@ -78,19 +78,19 @@ public class KhuVucSoap implements Serializable {
 	}
 
 	public long getPrimaryKey() {
-		return _id;
+		return _kVid;
 	}
 
 	public void setPrimaryKey(long pk) {
-		setId(pk);
+		setKVid(pk);
 	}
 
-	public long getId() {
-		return _id;
+	public long getKVid() {
+		return _kVid;
 	}
 
-	public void setId(long id) {
-		_id = id;
+	public void setKVid(long kVid) {
+		_kVid = kVid;
 	}
 
 	public String getKhuVucId() {
@@ -109,7 +109,7 @@ public class KhuVucSoap implements Serializable {
 		_khuVucName = khuVucName;
 	}
 
-	private long _id;
+	private long _kVid;
 	private String _khuVucId;
 	private String _khuVucName;
 }

@@ -9,11 +9,21 @@
 	
 %>
 <liferay-ui:icon-list>
-	<portlet:actionURL name="editSP" var="editURL">
+	<portlet:actionURL name="publicSP" var="Public">
 		<portlet:param name="resourcePrimKey" value="<%=primKey%>" />
 	</portlet:actionURL>
-	<liferay-ui:icon image="edit" message="Edit"
-		url="<%=editURL.toString()%>" />
+	<portlet:actionURL name="unPublicSP" var="UnPublic">
+		<portlet:param name="resourcePrimKey" value="<%=primKey%>" />
+	</portlet:actionURL>
+	
+	<%if(sp.getStatus()==1){ %>
+	<liferay-ui:icon image="edit" message="UnPublic"
+		url="<%=UnPublic.toString()%>" />
+	<%}else if(sp.getStatus()==-1){ %>
+	<liferay-ui:icon image="edit" message="Public"
+		url="<%=Public.toString()%>" />
+	
+	<%}%>
 	<portlet:actionURL name="deleteSP" var="deleteURL">
 		<portlet:param name="resourcePrimKey" value="<%=primKey%>" />
 	</portlet:actionURL>

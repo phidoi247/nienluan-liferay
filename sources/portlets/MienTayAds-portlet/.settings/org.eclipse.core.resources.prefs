@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//docroot/WEB-INF/src/com/thanhnhan/ActionUtil.java=UTF-8
 encoding//docroot/WEB-INF/src/content/Language-vi.properties=UTF-8
 encoding//docroot/WEB-INF/src/content/quanly/Language.properties=UTF-8
 encoding//docroot/html/chitietsanpham/view.jsp=UTF-8
@@ -7,3 +8,4 @@ encoding//docroot/html/quanly/Language_vi.properties=UTF-8
 encoding//docroot/html/quanly/view.jsp=UTF-8
 encoding//docroot/html/themloaisp/edit_loaisp.jsp=UTF-8
 encoding//docroot/html/themloaisp/view.jsp=UTF-8
+encoding/<project>=UTF-8

@@ -5,7 +5,7 @@
 	LoaiSP loai = (LoaiSP) request.getAttribute("loai");
 %>
 <portlet:renderURL var="cancelURL">
-	<portlet:param name="mvcPath" value="/html/themloaisp/view.jsp" />
+	<portlet:param name="mvcPath" value="/html/quanly/view.jsp?tabs1=Quản lý Danh Mục" />
 </portlet:renderURL>
 <portlet:actionURL name="updateLoaiSP" var="updateLoaiSPURL" />
 <h2>Edit Loại Sản Phẩm</h2>

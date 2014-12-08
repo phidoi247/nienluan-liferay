@@ -16,6 +16,9 @@ package com.thanhnhan.service.impl;
 
 import java.util.List;
 
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.thanhnhan.model.SanPham;
 import com.thanhnhan.service.base.SanPhamLocalServiceBaseImpl;
@@ -47,8 +50,7 @@ public class SanPhamLocalServiceImpl extends SanPhamLocalServiceBaseImpl {
 	 * local service.
 	 */
 	/**
-	 * AddSP method
-	 * return 1 SanPham Object
+	 * AddSP method return 1 SanPham Object
 	 */
 	@SuppressWarnings("deprecation")
 	public SanPham addSP(SanPham newSP) throws SystemException {
@@ -63,21 +65,26 @@ public class SanPhamLocalServiceImpl extends SanPhamLocalServiceBaseImpl {
 		sp.setNgayDang(newSP.getNgayDang());
 		sp.setImage(newSP.getImage());
 		sp.setLoaiSPId(newSP.getLoaiSPId());
-		sp.setKhuVucId(newSP.getKhuVucId());
+		// sp.setKhuVucId(newSP.getKhuVucId());
 		sp.setPassWord(newSP.getPassWord());
 		sp.setLoaiNguoiDung(newSP.getLoaiNguoiDung());
 		sp.setLoaiMuaBan(newSP.getLoaiMuaBan());
 		sp.setEmail(newSP.getEmail());
-		return sanPhamPersistence.update(sp,false);
+		sp.setKVid(newSP.getKVid());
+		return sanPhamPersistence.update(sp, false);
 	}
-	
-	public List<SanPham> getSanPhams() throws SystemException{
-		List<SanPham> SPs = sanPhamPersistence.findAll();
-		return SPs;
+
+	public List<SanPham> getSanPhamPublics() throws SystemException{
+		DynamicQuery dynamicQuery = DynamicQueryFactoryUtil.forClass(SanPham.class);
+		dynamicQuery.add(PropertyFactoryUtil.forName("Status").eq(1));
+		return sanPhamPersistence.findWithDynamicQuery(dynamicQuery);
 	}
-	
+
+	public List<SanPham> getSanPhams() throws SystemException {
+		return sanPhamPersistence.findAll();
+	}
+
 	public List<SanPham> getSanPhams(int start, int end) throws SystemException {
-		List<SanPham> SPs = sanPhamPersistence.findAll(start, end);
-		return SPs;
+		return sanPhamPersistence.findAll(start, end);
 	}
 }

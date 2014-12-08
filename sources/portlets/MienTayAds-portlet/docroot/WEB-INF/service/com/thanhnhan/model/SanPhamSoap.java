@@ -41,11 +41,12 @@ public class SanPhamSoap implements Serializable {
 		soapModel.setNgayDang(model.getNgayDang());
 		soapModel.setImage(model.getImage());
 		soapModel.setLoaiSPId(model.getLoaiSPId());
-		soapModel.setKhuVucId(model.getKhuVucId());
 		soapModel.setPassWord(model.getPassWord());
 		soapModel.setLoaiNguoiDung(model.getLoaiNguoiDung());
 		soapModel.setLoaiMuaBan(model.getLoaiMuaBan());
 		soapModel.setEmail(model.getEmail());
+		soapModel.setKVid(model.getKVid());
+		soapModel.setStatus(model.getStatus());
 
 		return soapModel;
 	}
@@ -178,14 +179,6 @@ public class SanPhamSoap implements Serializable {
 		_loaiSPId = loaiSPId;
 	}
 
-	public long getKhuVucId() {
-		return _khuVucId;
-	}
-
-	public void setKhuVucId(long khuVucId) {
-		_khuVucId = khuVucId;
-	}
-
 	public String getPassWord() {
 		return _passWord;
 	}
@@ -218,6 +211,22 @@ public class SanPhamSoap implements Serializable {
 		_email = email;
 	}
 
+	public long getKVid() {
+		return _kVid;
+	}
+
+	public void setKVid(long kVid) {
+		_kVid = kVid;
+	}
+
+	public int getStatus() {
+		return _Status;
+	}
+
+	public void setStatus(int Status) {
+		_Status = Status;
+	}
+
 	private long _spId;
 	private String _spName;
 	private String _desc;
@@ -228,9 +237,10 @@ public class SanPhamSoap implements Serializable {
 	private Date _ngayDang;
 	private String _image;
 	private long _loaiSPId;
-	private long _khuVucId;
 	private String _passWord;
 	private int _loaiNguoiDung;
 	private int _loaiMuaBan;
 	private String _email;
+	private long _kVid;
+	private int _Status;
 }

@@ -207,20 +207,6 @@ public interface SanPhamModel extends BaseModel<SanPham> {
 	public void setLoaiSPId(long loaiSPId);
 
 	/**
-	 * Returns the khu vuc ID of this san pham.
-	 *
-	 * @return the khu vuc ID of this san pham
-	 */
-	public long getKhuVucId();
-
-	/**
-	 * Sets the khu vuc ID of this san pham.
-	 *
-	 * @param khuVucId the khu vuc ID of this san pham
-	 */
-	public void setKhuVucId(long khuVucId);
-
-	/**
 	 * Returns the pass word of this san pham.
 	 *
 	 * @return the pass word of this san pham
@@ -277,6 +263,34 @@ public interface SanPhamModel extends BaseModel<SanPham> {
 	 * @param email the email of this san pham
 	 */
 	public void setEmail(String email);
+
+	/**
+	 * Returns the k vid of this san pham.
+	 *
+	 * @return the k vid of this san pham
+	 */
+	public long getKVid();
+
+	/**
+	 * Sets the k vid of this san pham.
+	 *
+	 * @param kVid the k vid of this san pham
+	 */
+	public void setKVid(long kVid);
+
+	/**
+	 * Returns the status of this san pham.
+	 *
+	 * @return the status of this san pham
+	 */
+	public int getStatus();
+
+	/**
+	 * Sets the status of this san pham.
+	 *
+	 * @param Status the status of this san pham
+	 */
+	public void setStatus(int Status);
 
 	@Override
 	public boolean isNew();

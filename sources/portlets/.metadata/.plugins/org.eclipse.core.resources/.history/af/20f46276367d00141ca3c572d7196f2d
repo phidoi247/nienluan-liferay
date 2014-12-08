@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.thanhnhan" auto-namespace-tables="true">
+	<author>ThanhNhan</author>
+	<namespace>MienTayAds</namespace>
+	<entity name="LoaiSP" local-service="true">
+		<column name="loaiSPId" type="long" primary="true" id-type="increment"></column>
+		<column name="loaiSPName" type="String" />
+		<order by="asc"> <!-- index tren cot productName -->
+			<order-column name="loaiSPName" />
+		</order>
+		<finder name="LoaiSP" return-type="Collection">
+			<finder-column name="loaiSPId" />
+			<finder-column name="loaiSPName" />
+		</finder>
+	</entity>
+    <entity name="SanPham" local-service="true">
+        <column name="spId" primary="true" type="long"></column>
+        <column name="spName" type="String"></column>
+        <column name="desc" type="String"></column>
+        <column name="nguoiDang" type="String"></column>
+        <column name="sdt" type="String"></column>
+        <column name="diaChi" type="String"></column>
+        <column name="gia" type="String"></column>
+        <column name="ngayDang" type="Date"></column>
+        <column name="image" type="String"></column>
+        <column name="loaiSPId" type="long"></column>
+        <column name="khuVucId" type="String"></column>
+        <column name="passWord" type="String"></column>
+        <column name="loaiNguoiDung" type="int"></column>
+        <column name="loaiMuaBan" type="int"></column>
+        <column name="email" type="String"></column>
+    </entity>
+    <entity name="KhuVuc" local-service="true" >
+        <column name="kVid" type="long" primary="true" id-type="increment"></column>
+        <column name="khuVucId" type="String" primary="true"></column>
+        <column name="khuVucName" type="String"></column>
+        <finder name="KhuVucId" return-type="KhuVuc" unique="true">
+            <finder-column name="khuVucId" />
+        </finder>
+        
+    </entity>
+</service-builder>

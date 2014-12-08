@@ -6,15 +6,14 @@
 </head>
 <h3>Thêm danh mục sản phẩm</h3>
 <portlet:actionURL name="addLoaiSP" var="addLoaiSPURL" />
-<portlet:actionURL name="deleteLoaiSP" var="deleteURL" />
 
 <aui:form action="<%=addLoaiSPURL.toString()%>" method="post"
 	name="oForm">
 	<aui:fieldset>
+		<aui:input name="tabs1" type="hidden" value="Quản lý Danh Mục"/>
 		<aui:input id="loaiSPName" name="loaiSPName" size="45" required="true" />
 		<aui:button-row>
-			<aui:button type="button" value="add"
-				onclick="javascript:addLoaiSP()" />
+			<aui:button type="submit" value="add"/>
 		</aui:button-row>
 	</aui:fieldset>
 </aui:form>
@@ -23,7 +22,8 @@
 
 	<liferay-ui:search-container-results>
 		<%
-			List<LoaiSP> tempResults = ActionUtil.getLoais(renderRequest);
+			List<LoaiSP> tempResults = ActionUtil
+							.getLoais(renderRequest);
 					results = ListUtil.subList(tempResults,
 							searchContainer.getStart(),
 							searchContainer.getEnd());
@@ -31,10 +31,6 @@
 					pageContext.setAttribute("results", results);
 					pageContext.setAttribute("total", total);
 
-					//System.out.println(tempResults);
-					//System.out.println(results);
-					//System.out.println(total);
-					//String json = new Gson().toJson(results);
 		%>
 
 	</liferay-ui:search-container-results>

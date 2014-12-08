@@ -8,8 +8,10 @@ import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 import com.thanhnhan.model.KhuVuc;
 import com.thanhnhan.model.LoaiSP;
+import com.thanhnhan.model.SanPham;
 import com.thanhnhan.service.KhuVucLocalServiceUtil;
 import com.thanhnhan.service.LoaiSPLocalServiceUtil;
+import com.thanhnhan.service.SanPhamLocalServiceUtil;
 
 /**
  * Portlet implementation class QuanLy
@@ -39,17 +41,17 @@ public class QuanLy extends MVCPortlet {
 		response.setRenderParameter("mvcPath", "/html/quanlykv/editkhuvuc.jsp");
 	}
 
-	public void updateKV(ActionRequest request, ActionResponse response)
-			throws Exception {
-		long kvId = ParamUtil.getLong(request, "resourcePrimKey");
-		// ArrayList<String> err = new ArrayList<String>();
-		KhuVuc kv = KhuVucLocalServiceUtil.getKhuVuc(kvId);
-		KhuVuc requestKV = ActionUtil.KhuVucFromRequest(request);
-		kv.setKhuVucId(requestKV.getKhuVucId());
-		kv.setKhuVucName(requestKV.getKhuVucName());
-		KhuVucLocalServiceUtil.updateKhuVuc(kv);
-		SessionMessages.add(request, "KhuVucUpdated");
-	}
+//	public void updateKV(ActionRequest request, ActionResponse response)
+//			throws Exception {
+//		long kvId = ParamUtil.getLong(request, "resourcePrimKey");
+//		// ArrayList<String> err = new ArrayList<String>();
+//		KhuVuc kv = KhuVucLocalServiceUtil.getKhuVuc(kvId);
+//		KhuVuc requestKV = ActionUtil.KhuVucFromRequest(request);
+//		kv.setKhuVucId(requestKV.getKhuVucId());
+//		kv.setKhuVucName(requestKV.getKhuVucName());
+//		KhuVucLocalServiceUtil.updateKhuVuc(kv);
+//		SessionMessages.add(request, "KhuVucUpdated");
+//	}
 
 	public void deleteKV(ActionRequest request, ActionResponse response)
 			throws Exception {
@@ -91,22 +93,51 @@ public class QuanLy extends MVCPortlet {
 				"/html/themloaisp/edit_loaisp.jsp");
 	}
 
-	public void updateLoaiSP(ActionRequest request, ActionResponse response)
-			throws Exception {
-		long loaiSPId = ParamUtil.getLong(request, "resourcePrimKey");
-		//ArrayList<String> err = new ArrayList<String>();
-		LoaiSP loai = LoaiSPLocalServiceUtil.getLoaiSP(loaiSPId);
-		LoaiSP requestLoai = ActionUtil.loaiSPFromRequest(request);
-		loai.setLoaiSPId(requestLoai.getLoaiSPId());
-		loai.setLoaiSPName(requestLoai.getLoaiSPName());
-		LoaiSPLocalServiceUtil.updateLoaiSP(loai);
-		SessionMessages.add(request, "loaiUpdated");
-	}
+//	public void updateLoaiSP(ActionRequest request, ActionResponse response)
+//			throws Exception {
+//		long loaiSPId = ParamUtil.getLong(request, "resourcePrimKey");
+//		//ArrayList<String> err = new ArrayList<String>();
+//		LoaiSP loai = LoaiSPLocalServiceUtil.getLoaiSP(loaiSPId);
+//		LoaiSP requestLoai = ActionUtil.loaiSPFromRequest(request);
+//		loai.setLoaiSPId(requestLoai.getLoaiSPId());
+//		loai.setLoaiSPName(requestLoai.getLoaiSPName());
+//		LoaiSPLocalServiceUtil.updateLoaiSP(loai);
+//		SessionMessages.add(request, "loaiUpdated");
+//	}
 
 	public void deleteLoaiSP(ActionRequest request, ActionResponse response)
 			throws Exception {
 		long loaiSPId = ParamUtil.getLong(request, "resourcePrimKey");
 		LoaiSPLocalServiceUtil.deleteLoaiSP(loaiSPId);
 	}
+	
+	
+	public void deleteSP(ActionRequest request, ActionResponse response)
+			throws Exception {
+		long spId = ParamUtil.getLong(request, "resourcePrimKey");
+		SanPhamLocalServiceUtil.deleteSanPham(spId);
+		response.setRenderParameter("mvcPath",
+				"/html/quanly/view.jsp?tabs1=Quản lý Tin");
+	}
+	
+	public void publicSP(ActionRequest request, ActionResponse response)
+			throws Exception {
+		long spId = ParamUtil.getLong(request, "resourcePrimKey");
+		SanPham sp = SanPhamLocalServiceUtil.getSanPham(spId);
+		sp.setStatus(1);
+		SanPhamLocalServiceUtil.updateSanPham(sp);
+		response.setRenderParameter("mvcPath",
+				"/html/quanly/view.jsp?tabs1=Quản lý Tin");
+	}
+	public void unPublicSP(ActionRequest request, ActionResponse response)
+			throws Exception {
+		long spId = ParamUtil.getLong(request, "resourcePrimKey");
+		SanPham sp = SanPhamLocalServiceUtil.getSanPham(spId);
+		sp.setStatus(-1);
+		SanPhamLocalServiceUtil.updateSanPham(sp);
+		response.setRenderParameter("mvcPath",
+				"/html/quanly/view.jsp?tabs1=Quản lý Tin");
+	}
+
 
 }

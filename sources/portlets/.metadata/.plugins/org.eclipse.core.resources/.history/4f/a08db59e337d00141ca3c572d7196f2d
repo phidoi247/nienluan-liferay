@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.thanhnhan.model.KhuVuc">
+		<field name="kVid" type="long" />
+		<field name="khuVucId" type="String" />
+		<field name="khuVucName" type="String" />
+	</model>
+	<model name="com.thanhnhan.model.LoaiSP">
+		<field name="loaiSPId" type="long" />
+		<field name="loaiSPName" type="String" />
+	</model>
+	<model name="com.thanhnhan.model.SanPham">
+		<field name="spId" type="long" />
+		<field name="spName" type="String" />
+		<field name="desc" type="String">
+			<hint-collection name="TEXTTYPE" />
+		</field>
+		<field name="nguoiDang" type="String" />
+		<field name="sdt" type="String" />
+		<field name="diaChi" type="String" />
+		<field name="gia" type="String" />
+		<field name="ngayDang" type="Date" />
+		<field name="image" type="String" />
+		<field name="loaiSPId" type="long" />
+		<field name="khuVucId" type="String" />
+		<field name="passWord" type="String" />
+		<field name="loaiNguoiDung" type="int" />
+		<field name="loaiMuaBan" type="int" />
+		<field name="email" type="String" />
+	</model>
+</model-hints>

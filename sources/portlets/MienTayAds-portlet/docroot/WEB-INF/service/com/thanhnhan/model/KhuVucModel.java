@@ -58,18 +58,18 @@ public interface KhuVucModel extends BaseModel<KhuVuc> {
 	public void setPrimaryKey(long primaryKey);
 
 	/**
-	 * Returns the ID of this khu vuc.
+	 * Returns the k vid of this khu vuc.
 	 *
-	 * @return the ID of this khu vuc
+	 * @return the k vid of this khu vuc
 	 */
-	public long getId();
+	public long getKVid();
 
 	/**
-	 * Sets the ID of this khu vuc.
+	 * Sets the k vid of this khu vuc.
 	 *
-	 * @param id the ID of this khu vuc
+	 * @param kVid the k vid of this khu vuc
 	 */
-	public void setId(long id);
+	public void setKVid(long kVid);
 
 	/**
 	 * Returns the khu vuc ID of this khu vuc.

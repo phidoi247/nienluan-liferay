@@ -1,15 +1,12 @@
-
 * {
-	padding: 0;
-	margin
-	:
-	 
-	0;
+	padding: 0px;
+	margin: 0px;
 }
 
-.clear{
+.clear {
 	clear: both;
 }
+
 .list-sanpham {
 	
 }
@@ -34,12 +31,13 @@
 }
 
 .sanpham-item:hover {
-	background-color: #FCFCFA;
+	background-color: #CFFFE2;
 }
-.img-thumb{
+
+.img-thumb {
 	width: 21%;
 	max-width: 100px;
-	height:auto;
+	height: auto;
 	max-height: 73px;
 	display: block;
 	float: left;
@@ -53,16 +51,16 @@
 	display: block;
 	float: left;
 	padding: 0;
-	margin:0;
-	
+	margin: 0;
 }
 
 .img-thumb img:hover {
 	border: 1px solid #08c;
 	box-shadow: 0 1px 4px rgba(0, 105, 214, 0.45), 1px 1px 0 white;
 }
-.sp-info{
-	display:block;
+
+.sp-info {
+	display: block;
 	width: 82%;
 	float: left;
 }
@@ -70,12 +68,12 @@
 .sp-name {
 	color: #369;
 	font-size: 14px;
-	width:100%;
+	width: 100%;
 	font-weight: bold;
 	text-decoration: none;
 	display: -webkit-box;
-	padding: 3px 0 3px 5px; 
-	#background-color:#F4FBFF;
+	padding: 3px 0 3px 5px; #
+	background-color: #F4FBFF;
 }
 
 .sp-info .sp-name:hover {
@@ -83,10 +81,11 @@
 	text-decoration: underline;
 }
 
-.sp-info>.details{
+.sp-info>.details {
 	padding: 2px;
-	bottom: 1px;]
+	bottom: 1px;
 }
+
 .sp-info>.details>.sp-gia {
 	color: red;
 	font-size: 14px;
@@ -95,85 +94,97 @@
 }
 
 /* Chi tiet san pham */
-.detail-right{
+.detail-right {
 	display: block;
 	width: 73%;
-	position:relative;
+	position: relative;
 	float: left;
 }
-.clear{
+
+.clear {
 	clear: both;
 }
-.detail-body{
+
+.detail-body {
 	padding: 10px;
 	min-height: 500px;
 	position: relative;
 }
-.detail-body .detail-right{
-		background: #fff;
-		min-height: 500px;
-		border-radius: 3px;
-		border: 1px #337ab7 solid;
-		display: block;
-		position: relative;
+
+.detail-body .detail-right {
+	background: #fff;
+	min-height: 500px;
+	border-radius: 3px;
+	border: 1px #337ab7 solid;
+	display: block;
+	position: relative;
 }
-.detail-body .detail-title{
+
+.detail-body .detail-title {
 	padding-left: 10px;
 	color: #fff;
 	background-color: #337ab7;
 	border-color: #337ab7;
 }
-.detail-body .detail-title>h2{
+
+.detail-body .detail-title>h2 {
 	margin-top: 0;
 	margin-bottom: 0;
 	font-size: 16px;
-	color: inherit;	
+	color: inherit;
 }
-.detail-body .image{
+
+.detail-body .image {
 	width: 90%;
 	height: 500px;
 	background: #fff
-	
 }
-.detail-body .thao-tac{
+
+.detail-body .thao-tac {
 	border-top: 1px #EDEDED solid;
 	padding: 5px 10px;
 }
-.detail-body .thao-tac ul{
+
+.detail-body .thao-tac ul {
 	display: block;
 	clear: both;
 }
-.detail-body .thao-tac ul>li{
+
+.detail-body .thao-tac ul>li {
 	display: block;
 	float: left;
 	padding: 2px 5px;
 	min-width: 15%;
 	text-align: center;
 }
-.info{
+
+.info {
 	border-top: 1px #ccc dashed;
 	display: block;
 	clear: both;
 	font-size: small;
 	font-style: italic;
 }
-.detail-left{
+
+.detail-left {
 	display: block;
 	width: 25%;
 	min-width: 120px;
-	position:relative;
+	position: relative;
 	float: right;
 }
-.contact-box{
+
+.contact-box {
 	border-color: #faebcc;
 	margin-bottom: 20px;
 	background-color: #fff;
 	border: 1px solid transparent;
 	border-radius: 4px;
-	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
-.contact-box .label-contact{
+
+.contact-box .label-contact {
 	margin-top: 0;
 	margin-bottom: 0;
 	font-size: 14px;
@@ -182,7 +193,11 @@
 	background-color: #fcf8e3;
 	border-color: #faebcc;
 }
-.contact-box .info-contact{
+
+.contact-box .info-contact {
 	padding: 5px;
 }
 
+#p_p_id_dangbai_WAR_MienTayAdsportlet_ textarea {
+	width: 100%;
+}

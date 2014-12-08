@@ -59,20 +59,20 @@ public interface KhuVucLocalService extends BaseLocalService,
 	/**
 	* Creates a new khu vuc with the primary key. Does not add the khu vuc to the database.
 	*
-	* @param id the primary key for the new khu vuc
+	* @param kVid the primary key for the new khu vuc
 	* @return the new khu vuc
 	*/
-	public com.thanhnhan.model.KhuVuc createKhuVuc(long id);
+	public com.thanhnhan.model.KhuVuc createKhuVuc(long kVid);
 
 	/**
 	* Deletes the khu vuc with the primary key from the database. Also notifies the appropriate model listeners.
 	*
-	* @param id the primary key of the khu vuc
+	* @param kVid the primary key of the khu vuc
 	* @return the khu vuc that was removed
 	* @throws PortalException if a khu vuc with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public com.thanhnhan.model.KhuVuc deleteKhuVuc(long id)
+	public com.thanhnhan.model.KhuVuc deleteKhuVuc(long kVid)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 
@@ -165,19 +165,19 @@ public interface KhuVucLocalService extends BaseLocalService,
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public com.thanhnhan.model.KhuVuc fetchKhuVuc(long id)
+	public com.thanhnhan.model.KhuVuc fetchKhuVuc(long kVid)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
 	* Returns the khu vuc with the primary key.
 	*
-	* @param id the primary key of the khu vuc
+	* @param kVid the primary key of the khu vuc
 	* @return the khu vuc
 	* @throws PortalException if a khu vuc with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public com.thanhnhan.model.KhuVuc getKhuVuc(long id)
+	public com.thanhnhan.model.KhuVuc getKhuVuc(long kVid)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 

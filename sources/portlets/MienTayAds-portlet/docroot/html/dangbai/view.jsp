@@ -2,20 +2,21 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/init.jsp"%>
 <%@ page import="com.mysql.jdbc.MysqlDataTruncation"%>
-<%@ page import="com.liferay.util.PwdGenerator" %>
-<%@ page import="javax.portlet.PortletPreferences;" %>  
+<%@ page import="com.liferay.util.PwdGenerator"%>
+<%@ page import="javax.portlet.PortletPreferences;"%>
 <portlet:defineObjects />
 <portlet:actionURL name="addSP" var="dangBaiUrl" />
-<portlet:actionURL var="editCaseURL" name="upLoadImg" />
 
 
 <%
-String uploadProgressId = PwdGenerator.getPassword(PwdGenerator.KEY3, 4);
-PortletPreferences prefs = renderRequest.getPreferences();
+	String uploadProgressId = PwdGenerator.getPassword(
+			PwdGenerator.KEY3, 4);
+	PortletPreferences prefs = renderRequest.getPreferences();
 
 	try {
 %>
-<aui:form action="<%=dangBaiUrl.toString()%>" method="post">
+<aui:form action="<%=dangBaiUrl.toString()%>" method="post"
+	enctype="multipart/form-data">
 	<div class="ui_header">
 		<liferay-ui:message key="dang-tin-noi-dung-tin"></liferay-ui:message>
 		<span class="ui_header_notice">(<liferay-ui:message
@@ -32,8 +33,7 @@ PortletPreferences prefs = renderRequest.getPreferences();
 										.getKVs();
 								for (KhuVuc kv : khuVucList) {
 			%>
-			<aui:option label="<%=kv.getKhuVucName()%>"
-				value="<%=kv.getKhuVucId()%>"></aui:option>
+			<aui:option label="<%=kv.getKhuVucName()%>" value="<%=kv.getKVid()%>"></aui:option>
 			<%
 				} // end for KhuVuc
 			%>
@@ -83,10 +83,12 @@ PortletPreferences prefs = renderRequest.getPreferences();
 
 	<aui:row class="ui_row">
 		<aui:input type="money" name="gia" id="dang-tin-gia"
-			placeholder="place-gia" label="gia-dang-tin" />đ
+			placeholder="place-gia" label="gia-dang-tin" />
 	</aui:row>
+
 	<aui:row class="ui_row">
-		// upload image
+		<label for="images">Up load hình ảnh(tối đa 5 hình ảnh):</label>
+		<input type="file" name="images" multiple />
 	</aui:row>
 
 	<aui:row class="ui_row">
@@ -120,22 +122,8 @@ PortletPreferences prefs = renderRequest.getPreferences();
 		<aui:input name="diaChi" length="50" placeholder="place-diachi"
 			id="dang-tin-diachi" label="dang-tin-diachi"></aui:input>
 	</aui:row>
-	<!--  Upload  -->
-	<liferay-ui:success key="success"
-		message=" YEAH. Case uploaded successfully!" />
-	<liferay-ui:error key="error"
-		message="Sorry, an error prevented the upload. Please try again." />
-	<liferay-ui:upload-progress id="<%=uploadProgressId.toString()%>" message="uploading"
-		redirect="<%=editCaseURL.toString()%>" />
-	<aui:form action="<%=editCaseURL.toString()%>" enctype="multipart/form-data"
-		method="post">
-		<aui:input type="file" name="fileName" size="75" />
-		<input type="submit" value="<liferay-ui:message key="upload" />"
-			onClick="<%=uploadProgressId.toString()%>.startProgress(); return true;" />
-		<!--  aui:button type="submit" value="Save" /-->
-	</aui:form>
 
-	<!--  Upload  -->
+
 	<aui:button type="submit" value="add" />
 
 </aui:form>

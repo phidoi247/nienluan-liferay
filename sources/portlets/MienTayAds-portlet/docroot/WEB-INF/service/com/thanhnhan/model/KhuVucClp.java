@@ -50,17 +50,17 @@ public class KhuVucClp extends BaseModelImpl<KhuVuc> implements KhuVuc {
 
 	@Override
 	public long getPrimaryKey() {
-		return _id;
+		return _kVid;
 	}
 
 	@Override
 	public void setPrimaryKey(long primaryKey) {
-		setId(primaryKey);
+		setKVid(primaryKey);
 	}
 
 	@Override
 	public Serializable getPrimaryKeyObj() {
-		return _id;
+		return _kVid;
 	}
 
 	@Override
@@ -72,7 +72,7 @@ public class KhuVucClp extends BaseModelImpl<KhuVuc> implements KhuVuc {
 	public Map<String, Object> getModelAttributes() {
 		Map<String, Object> attributes = new HashMap<String, Object>();
 
-		attributes.put("id", getId());
+		attributes.put("kVid", getKVid());
 		attributes.put("khuVucId", getKhuVucId());
 		attributes.put("khuVucName", getKhuVucName());
 
@@ -81,10 +81,10 @@ public class KhuVucClp extends BaseModelImpl<KhuVuc> implements KhuVuc {
 
 	@Override
 	public void setModelAttributes(Map<String, Object> attributes) {
-		Long id = (Long)attributes.get("id");
+		Long kVid = (Long)attributes.get("kVid");
 
-		if (id != null) {
-			setId(id);
+		if (kVid != null) {
+			setKVid(kVid);
 		}
 
 		String khuVucId = (String)attributes.get("khuVucId");
@@ -101,21 +101,21 @@ public class KhuVucClp extends BaseModelImpl<KhuVuc> implements KhuVuc {
 	}
 
 	@Override
-	public long getId() {
-		return _id;
+	public long getKVid() {
+		return _kVid;
 	}
 
 	@Override
-	public void setId(long id) {
-		_id = id;
+	public void setKVid(long kVid) {
+		_kVid = kVid;
 
 		if (_khuVucRemoteModel != null) {
 			try {
 				Class<?> clazz = _khuVucRemoteModel.getClass();
 
-				Method method = clazz.getMethod("setId", long.class);
+				Method method = clazz.getMethod("setKVid", long.class);
 
-				method.invoke(_khuVucRemoteModel, id);
+				method.invoke(_khuVucRemoteModel, kVid);
 			}
 			catch (Exception e) {
 				throw new UnsupportedOperationException(e);
@@ -238,7 +238,7 @@ public class KhuVucClp extends BaseModelImpl<KhuVuc> implements KhuVuc {
 	public Object clone() {
 		KhuVucClp clone = new KhuVucClp();
 
-		clone.setId(getId());
+		clone.setKVid(getKVid());
 		clone.setKhuVucId(getKhuVucId());
 		clone.setKhuVucName(getKhuVucName());
 
@@ -291,8 +291,8 @@ public class KhuVucClp extends BaseModelImpl<KhuVuc> implements KhuVuc {
 	public String toString() {
 		StringBundler sb = new StringBundler(7);
 
-		sb.append("{id=");
-		sb.append(getId());
+		sb.append("{kVid=");
+		sb.append(getKVid());
 		sb.append(", khuVucId=");
 		sb.append(getKhuVucId());
 		sb.append(", khuVucName=");
@@ -311,8 +311,8 @@ public class KhuVucClp extends BaseModelImpl<KhuVuc> implements KhuVuc {
 		sb.append("</model-name>");
 
 		sb.append(
-			"<column><column-name>id</column-name><column-value><![CDATA[");
-		sb.append(getId());
+			"<column><column-name>kVid</column-name><column-value><![CDATA[");
+		sb.append(getKVid());
 		sb.append("]]></column-value></column>");
 		sb.append(
 			"<column><column-name>khuVucId</column-name><column-value><![CDATA[");
@@ -328,7 +328,7 @@ public class KhuVucClp extends BaseModelImpl<KhuVuc> implements KhuVuc {
 		return sb.toString();
 	}
 
-	private long _id;
+	private long _kVid;
 	private String _khuVucId;
 	private String _khuVucName;
 	private BaseModel<?> _khuVucRemoteModel;

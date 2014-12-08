@@ -59,11 +59,12 @@ public class SanPhamWrapper implements SanPham, ModelWrapper<SanPham> {
 		attributes.put("ngayDang", getNgayDang());
 		attributes.put("image", getImage());
 		attributes.put("loaiSPId", getLoaiSPId());
-		attributes.put("khuVucId", getKhuVucId());
 		attributes.put("passWord", getPassWord());
 		attributes.put("loaiNguoiDung", getLoaiNguoiDung());
 		attributes.put("loaiMuaBan", getLoaiMuaBan());
 		attributes.put("email", getEmail());
+		attributes.put("kVid", getKVid());
+		attributes.put("Status", getStatus());
 
 		return attributes;
 	}
@@ -130,12 +131,6 @@ public class SanPhamWrapper implements SanPham, ModelWrapper<SanPham> {
 			setLoaiSPId(loaiSPId);
 		}
 
-		Long khuVucId = (Long)attributes.get("khuVucId");
-
-		if (khuVucId != null) {
-			setKhuVucId(khuVucId);
-		}
-
 		String passWord = (String)attributes.get("passWord");
 
 		if (passWord != null) {
@@ -158,6 +153,18 @@ public class SanPhamWrapper implements SanPham, ModelWrapper<SanPham> {
 
 		if (email != null) {
 			setEmail(email);
+		}
+
+		Long kVid = (Long)attributes.get("kVid");
+
+		if (kVid != null) {
+			setKVid(kVid);
+		}
+
+		Integer Status = (Integer)attributes.get("Status");
+
+		if (Status != null) {
+			setStatus(Status);
 		}
 	}
 
@@ -382,26 +389,6 @@ public class SanPhamWrapper implements SanPham, ModelWrapper<SanPham> {
 	}
 
 	/**
-	* Returns the khu vuc ID of this san pham.
-	*
-	* @return the khu vuc ID of this san pham
-	*/
-	@Override
-	public long getKhuVucId() {
-		return _sanPham.getKhuVucId();
-	}
-
-	/**
-	* Sets the khu vuc ID of this san pham.
-	*
-	* @param khuVucId the khu vuc ID of this san pham
-	*/
-	@Override
-	public void setKhuVucId(long khuVucId) {
-		_sanPham.setKhuVucId(khuVucId);
-	}
-
-	/**
 	* Returns the pass word of this san pham.
 	*
 	* @return the pass word of this san pham
@@ -479,6 +466,46 @@ public class SanPhamWrapper implements SanPham, ModelWrapper<SanPham> {
 	@Override
 	public void setEmail(java.lang.String email) {
 		_sanPham.setEmail(email);
+	}
+
+	/**
+	* Returns the k vid of this san pham.
+	*
+	* @return the k vid of this san pham
+	*/
+	@Override
+	public long getKVid() {
+		return _sanPham.getKVid();
+	}
+
+	/**
+	* Sets the k vid of this san pham.
+	*
+	* @param kVid the k vid of this san pham
+	*/
+	@Override
+	public void setKVid(long kVid) {
+		_sanPham.setKVid(kVid);
+	}
+
+	/**
+	* Returns the status of this san pham.
+	*
+	* @return the status of this san pham
+	*/
+	@Override
+	public int getStatus() {
+		return _sanPham.getStatus();
+	}
+
+	/**
+	* Sets the status of this san pham.
+	*
+	* @param Status the status of this san pham
+	*/
+	@Override
+	public void setStatus(int Status) {
+		_sanPham.setStatus(Status);
 	}
 
 	@Override

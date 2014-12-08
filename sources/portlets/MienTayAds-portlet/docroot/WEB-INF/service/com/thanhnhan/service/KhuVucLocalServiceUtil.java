@@ -55,25 +55,25 @@ public class KhuVucLocalServiceUtil {
 	/**
 	* Creates a new khu vuc with the primary key. Does not add the khu vuc to the database.
 	*
-	* @param id the primary key for the new khu vuc
+	* @param kVid the primary key for the new khu vuc
 	* @return the new khu vuc
 	*/
-	public static com.thanhnhan.model.KhuVuc createKhuVuc(long id) {
-		return getService().createKhuVuc(id);
+	public static com.thanhnhan.model.KhuVuc createKhuVuc(long kVid) {
+		return getService().createKhuVuc(kVid);
 	}
 
 	/**
 	* Deletes the khu vuc with the primary key from the database. Also notifies the appropriate model listeners.
 	*
-	* @param id the primary key of the khu vuc
+	* @param kVid the primary key of the khu vuc
 	* @return the khu vuc that was removed
 	* @throws PortalException if a khu vuc with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public static com.thanhnhan.model.KhuVuc deleteKhuVuc(long id)
+	public static com.thanhnhan.model.KhuVuc deleteKhuVuc(long kVid)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
-		return getService().deleteKhuVuc(id);
+		return getService().deleteKhuVuc(kVid);
 	}
 
 	/**
@@ -179,23 +179,23 @@ public class KhuVucLocalServiceUtil {
 		return getService().dynamicQueryCount(dynamicQuery, projection);
 	}
 
-	public static com.thanhnhan.model.KhuVuc fetchKhuVuc(long id)
+	public static com.thanhnhan.model.KhuVuc fetchKhuVuc(long kVid)
 		throws com.liferay.portal.kernel.exception.SystemException {
-		return getService().fetchKhuVuc(id);
+		return getService().fetchKhuVuc(kVid);
 	}
 
 	/**
 	* Returns the khu vuc with the primary key.
 	*
-	* @param id the primary key of the khu vuc
+	* @param kVid the primary key of the khu vuc
 	* @return the khu vuc
 	* @throws PortalException if a khu vuc with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public static com.thanhnhan.model.KhuVuc getKhuVuc(long id)
+	public static com.thanhnhan.model.KhuVuc getKhuVuc(long kVid)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
-		return getService().getKhuVuc(id);
+		return getService().getKhuVuc(kVid);
 	}
 
 	public static com.liferay.portal.model.PersistedModel getPersistedModel(

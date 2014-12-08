@@ -110,20 +110,20 @@ public interface KhuVucPersistence extends BasePersistence<KhuVuc> {
 	/**
 	* Creates a new khu vuc with the primary key. Does not add the khu vuc to the database.
 	*
-	* @param id the primary key for the new khu vuc
+	* @param kVid the primary key for the new khu vuc
 	* @return the new khu vuc
 	*/
-	public com.thanhnhan.model.KhuVuc create(long id);
+	public com.thanhnhan.model.KhuVuc create(long kVid);
 
 	/**
 	* Removes the khu vuc with the primary key from the database. Also notifies the appropriate model listeners.
 	*
-	* @param id the primary key of the khu vuc
+	* @param kVid the primary key of the khu vuc
 	* @return the khu vuc that was removed
 	* @throws com.thanhnhan.NoSuchKhuVucException if a khu vuc with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public com.thanhnhan.model.KhuVuc remove(long id)
+	public com.thanhnhan.model.KhuVuc remove(long kVid)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.thanhnhan.NoSuchKhuVucException;
 
@@ -134,23 +134,23 @@ public interface KhuVucPersistence extends BasePersistence<KhuVuc> {
 	/**
 	* Returns the khu vuc with the primary key or throws a {@link com.thanhnhan.NoSuchKhuVucException} if it could not be found.
 	*
-	* @param id the primary key of the khu vuc
+	* @param kVid the primary key of the khu vuc
 	* @return the khu vuc
 	* @throws com.thanhnhan.NoSuchKhuVucException if a khu vuc with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public com.thanhnhan.model.KhuVuc findByPrimaryKey(long id)
+	public com.thanhnhan.model.KhuVuc findByPrimaryKey(long kVid)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.thanhnhan.NoSuchKhuVucException;
 
 	/**
 	* Returns the khu vuc with the primary key or returns <code>null</code> if it could not be found.
 	*
-	* @param id the primary key of the khu vuc
+	* @param kVid the primary key of the khu vuc
 	* @return the khu vuc, or <code>null</code> if a khu vuc with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public com.thanhnhan.model.KhuVuc fetchByPrimaryKey(long id)
+	public com.thanhnhan.model.KhuVuc fetchByPrimaryKey(long kVid)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**

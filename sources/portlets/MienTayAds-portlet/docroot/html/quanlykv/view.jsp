@@ -27,7 +27,7 @@
 	</liferay-ui:search-container-results>
 
 	<liferay-ui:search-container-row className="com.thanhnhan.model.KhuVuc"
-		keyProperty="id" modelVar="kv">
+		keyProperty="kVid" modelVar="kv">
 		<liferay-ui:search-container-column-text name="khu-vuc-id"
 			property="khuVucId" orderable="true" />
 		<liferay-ui:search-container-column-text name="khu-vuc-name"

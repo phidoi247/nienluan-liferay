@@ -33,6 +33,6 @@ public abstract class KhuVucActionableDynamicQuery
 
 		setClassLoader(com.thanhnhan.service.ClpSerializer.class.getClassLoader());
 
-		setPrimaryKeyPropertyName("id");
+		setPrimaryKeyPropertyName("kVid");
 	}
 }

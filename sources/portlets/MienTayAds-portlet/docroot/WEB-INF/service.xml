@@ -25,14 +25,15 @@
         <column name="ngayDang" type="Date"></column>
         <column name="image" type="String"></column>
         <column name="loaiSPId" type="long"></column>
-        <column name="khuVucId" type="long"></column>
         <column name="passWord" type="String"></column>
         <column name="loaiNguoiDung" type="int"></column>
         <column name="loaiMuaBan" type="int"></column>
         <column name="email" type="String"></column>
+        <column name="kVid" type="long"></column>
+        <column name="Status" type="int"></column>
     </entity>
     <entity name="KhuVuc" local-service="true" >
-        <column name="id" type="long" primary="true" id-type="increment"></column>
+        <column name="kVid" type="long" primary="true" id-type="increment"></column>
         <column name="khuVucId" type="String" ></column>
         <column name="khuVucName" type="String"></column>
         <finder name="KhuVucId" return-type="KhuVuc" unique="true">

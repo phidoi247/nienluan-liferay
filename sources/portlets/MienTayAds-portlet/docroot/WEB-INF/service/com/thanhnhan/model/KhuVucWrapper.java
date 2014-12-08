@@ -48,7 +48,7 @@ public class KhuVucWrapper implements KhuVuc, ModelWrapper<KhuVuc> {
 	public Map<String, Object> getModelAttributes() {
 		Map<String, Object> attributes = new HashMap<String, Object>();
 
-		attributes.put("id", getId());
+		attributes.put("kVid", getKVid());
 		attributes.put("khuVucId", getKhuVucId());
 		attributes.put("khuVucName", getKhuVucName());
 
@@ -57,10 +57,10 @@ public class KhuVucWrapper implements KhuVuc, ModelWrapper<KhuVuc> {
 
 	@Override
 	public void setModelAttributes(Map<String, Object> attributes) {
-		Long id = (Long)attributes.get("id");
+		Long kVid = (Long)attributes.get("kVid");
 
-		if (id != null) {
-			setId(id);
+		if (kVid != null) {
+			setKVid(kVid);
 		}
 
 		String khuVucId = (String)attributes.get("khuVucId");
@@ -97,23 +97,23 @@ public class KhuVucWrapper implements KhuVuc, ModelWrapper<KhuVuc> {
 	}
 
 	/**
-	* Returns the ID of this khu vuc.
+	* Returns the k vid of this khu vuc.
 	*
-	* @return the ID of this khu vuc
+	* @return the k vid of this khu vuc
 	*/
 	@Override
-	public long getId() {
-		return _khuVuc.getId();
+	public long getKVid() {
+		return _khuVuc.getKVid();
 	}
 
 	/**
-	* Sets the ID of this khu vuc.
+	* Sets the k vid of this khu vuc.
 	*
-	* @param id the ID of this khu vuc
+	* @param kVid the k vid of this khu vuc
 	*/
 	@Override
-	public void setId(long id) {
-		_khuVuc.setId(id);
+	public void setKVid(long kVid) {
+		_khuVuc.setKVid(kVid);
 	}
 
 	/**
