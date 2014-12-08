@@ -18,8 +18,7 @@ public class DuyetBai extends MVCPortlet {
 		SanPham sp = SanPhamLocalServiceUtil.getSanPham(spId);
 		sp.setStatus(1);
 		SanPhamLocalServiceUtil.updateSanPham(sp);
-		response.setRenderParameter("mvcPath",
-				"/html/quanly/view.jsp?tabs1=Quản lý Tin");
+		
 	}
 	public void unPublicSP(ActionRequest request, ActionResponse response)
 			throws Exception {

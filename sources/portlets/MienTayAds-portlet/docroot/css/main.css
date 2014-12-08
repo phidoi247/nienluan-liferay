@@ -136,7 +136,7 @@
 
 .detail-body .image {
 	width: 90%;
-	height: 500px;
+	min-height: 500px;
 	background: #fff
 }
 

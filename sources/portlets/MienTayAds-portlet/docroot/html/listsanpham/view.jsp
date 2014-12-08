@@ -3,7 +3,7 @@
 <%@page import="com.thanhnhan.service.SanPhamLocalService"%>
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
-
+<%@page import="com.thanhnhan.ChiTietSanPham"%>
 <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%> --%>
 
 
@@ -30,6 +30,7 @@
 	}
 	SanPham sp = new SanPhamImpl();
 	Date d = new Date();
+	
 %>
 <div class="list-sanpham">
 	<%
@@ -44,12 +45,14 @@
 		else {
 
 			for (SanPham s : listSP) {
+			String[] imgs = ChiTietSanPham.getPhotos(s.getPrimaryKey());
 	%>
 	<div class="sanpham-item spid_<%=s.getSpId()%>"
 		onClick="location.href='./details?id=<%=s.getSpId()%>&name=<%=s.getSpName()%>';">
 
 		<div class="img-thumb">
-			<img src="<%=s.getImage()%>"></img>
+			<img src="data:image/jpg;base64,<%=imgs[1] %>"
+				title="Hình <%=sp.getSpName()%>" alt="<%=sp.getSpName()%>"/>
 		</div>
 		<div class="sp-info">
 			<div class="sp-name panel-title">

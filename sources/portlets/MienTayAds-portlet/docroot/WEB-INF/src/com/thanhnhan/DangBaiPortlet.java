@@ -5,7 +5,6 @@ import java.util.Date;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
-import javax.portlet.PortletSession;
 
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.upload.UploadPortletRequest;
@@ -46,7 +45,7 @@ public class DangBaiPortlet extends MVCPortlet {
 			byte[] bt;
 			try {
 				bt = FileUtil.getBytes(f);
-				imgs += "imgs_" + (Base64.objectToString(bt));
+				imgs += "imgs_" + (Base64.encode(bt));
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -57,31 +56,13 @@ public class DangBaiPortlet extends MVCPortlet {
 
 	}
 
-	// public void dangSP(ActionRequest request, ActionResponse response)
-	// throws SystemException {
-	// SanPham sp = ActionUtil.SanPhamFromRequest(request);
-	// /**
-	// * Upload images
-	// */
-	// UploadPortletRequest ureq = PortalUtil.getUploadPortletRequest(request);
-	// File[] file = ureq.getFiles("images");
-	// String imgs = "";
-	// for (File f : file) {
-	// byte[] bt;
-	// try {
-	// bt = FileUtil.getBytes(f);
-	// imgs += "imgs_" + (Base64.objectToString(bt));
-	// } catch (Exception e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// }
-	// sp.setImage(imgs);
-	// request.setAttribute("sp", sp);
-	// response.setRenderParameter("mvcPath", "/html/dangbai/upanh.jsp");
-	//
-	// }
-
+	/**
+	 * EditSP Function
+	 * 
+	 * @param request
+	 * @param response
+	 * @throws Exception
+	 */
 	public void editSP(ActionRequest request, ActionResponse response)
 			throws Exception {
 		long spid = ParamUtil.getLong(request, "resourcePrimKey");

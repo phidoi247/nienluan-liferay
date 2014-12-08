@@ -1,7 +1,9 @@
 eclipse.preferences.version=1
 encoding//docroot/WEB-INF/src/com/thanhnhan/ActionUtil.java=UTF-8
 encoding//docroot/WEB-INF/src/content/Language-vi.properties=UTF-8
+encoding//docroot/WEB-INF/src/content/duyetbai/Language.properties=UTF-8
 encoding//docroot/WEB-INF/src/content/quanly/Language.properties=UTF-8
+encoding//docroot/html/chitietsanpham/img.jsp=UTF-8
 encoding//docroot/html/chitietsanpham/view.jsp=UTF-8
 encoding//docroot/html/dangbai/view.jsp=UTF-8
 encoding//docroot/html/quanly/Language_vi.properties=UTF-8

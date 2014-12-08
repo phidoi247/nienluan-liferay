@@ -256,7 +256,7 @@
 			<mime-type>text/html</mime-type>
 			<portlet-mode>view</portlet-mode>
 		</supports>
-		<resource-bundle>content.Language</resource-bundle>
+		<resource-bundle>content.duyetbai.Language</resource-bundle>
 		<portlet-info>
 			<title>Duyet Bai</title>
 			<short-title>Duyet Bai</short-title>
