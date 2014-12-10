@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.liferay.ide.common"
+      label="Liferay IDE Common"
+      version="2.2.1.201411200728-ga2"
+      provider-name="Liferay, Inc.">
+
+   <description url="http://www.liferay.com/community/liferay-projects/liferay-ide/overview">
+      Liferay IDE is the official set of Eclipse plugins for supporting Liferay Portal development platorm.
+   </description>
+
+   <copyright url="http://www.liferay.com/products/liferay-portal/lgpl">
+      /**
+* Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+*
+* This library is free software; you can redistribute it and/or
+* modify it under the terms of the GNU Lesser General Public
+* License as published by the Free Software Foundation; either
+* version 2.1 of the License, or (at your option) any later
+* version.
+*
+* This library is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty
+* of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+* the GNU Lesser General Public License for more details.
+*/
+   </copyright>
+
+   <license url="http://www.gnu.org/licenses/lgpl-2.1.html">
+      Liferay IDE is free software distributed under the terms of the Lesser GNU Public License. See URL for full license text.  http://www.gnu.org/licenses/lgpl-2.1.html
+   </license>
+
+   <plugin
+         id="com.liferay.ide.core"
+         download-size="1795"
+         install-size="2082"
+         version="2.2.1.201411200728-ga2"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.ide.ui"
+         download-size="213"
+         install-size="409"
+         version="2.2.1.201411200728-ga2"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.ide.doc"
+         download-size="2405"
+         install-size="2526"
+         version="2.2.1.201411200728-ga2"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.ide.templates.core"
+         download-size="12"
+         install-size="22"
+         version="2.2.1.201411200728-ga2"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.ide.freemarker"
+         download-size="191"
+         install-size="364"
+         version="2.2.1.201411200728-ga2"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.ide.debug.core"
+         download-size="47"
+         install-size="94"
+         version="2.2.1.201411200728-ga2"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.ide.debug.ui"
+         download-size="18"
+         install-size="31"
+         version="2.2.1.201411200728-ga2"
+         unpack="false"/>
+
+</feature>

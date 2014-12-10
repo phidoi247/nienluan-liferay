@@ -1,0 +1,83 @@
+        Liferay Developer Studio 2.2.0 GA-1 Release notes
+
+This is the first release of Liferay Developer Studio 2.2 which provides an
+all-in-one, integrated development environment for developers to build plugins
+for the Liferay Portal 6.2 Enterprise Edition platform.
+
+Highlighted features from the current 2.0.0 GA-1 release.
+    * Improved Javascript editor
+    * Improved CSS editing
+    * Better AlloyUI support
+    * Many new portlet development features
+    * New and improved editors
+    * See a full list of new features here:
+      https://www.liferay.com/web/gregory.amerson/blog/-/blogs/liferay-ide-2-2-1-release
+
+Known Issues
+
+    * WebSphere server adapter does not support WebSphere profiles
+      with security enabled
+    * Eclipse-based Kaleo Designer does not support required-context tag
+
+Previous Highlighted Features
+
+Highlighted features from the previou 2.0.0 release
+
+    * Bundled Liferay Portal 6.2.10.6 EE SP5
+    * New features from Liferay IDE 2.1.1 integration
+        * Support for Liferay Portal 6.2 servers
+        * New and improved Liferay plugin project wizard
+
+
+Highlighted features from the previous 1.6.x releases.
+
+    * Miscellaneous bug fixes
+    * Bundled Liferay Portal 6.1.30 EE GA2 and Plugins SDK EE
+    * Bug fixes from Liferay IDE 1.6.2 integration
+    * New Kaleo Designer for Java
+
+Highlighted features from the previous 1.5 release.
+
+    * New liferay-hook.xml editor
+    * Remote server support through server-manager-web plugin
+    * Eclipse Indigo SR2 as base Eclipse platform
+
+Highlighted features from the previous 1.4 release.
+
+    * New Update wizard for upgrading Studio
+    * New portlet.xml editor
+    * New Liferay v6.1 (Tomcat 7) Server Support
+    * Bug fixes from Liferay IDE 1.4.x integration
+
+Highlighted features from the previous 1.3 release.
+
+    * New improved product packaging support, capable of proper updates
+    * New example projects
+    * New features and bug fixes from Liferay IDE 1.3.x integration
+
+Highlighted features from the previous 1.2 release.
+
+    * New WebSphere server development support
+        (see Help > Help Contents > Liferay Developer Tools Guide > Tasks
+            > Working with WebSphere Server for more info)
+    * New features and bug fixes from Liferay IDE 1.2.x integration
+
+Highlighted features from the previous 1.0 release:
+
+    * Eclipse Java for EE developers with Liferay IDE plugins pre-installed.
+    * Bundled runtimes that are pre-installed and configured on first launch:
+    * Liferay Portal 6.0 EE SP-1
+    * Liferay Plugins SDK 6.0 EE SP-1
+    * First Launch wizard that configures integrated runtimes on first launch.
+    * New Example project wizard for importing ready-to-run example plugins.
+
+To learn more about Liferay developer tools go here:
+http://www.liferay.com/community/wiki/-/wiki/Main/Liferay+IDE
+
+Differences between Liferay Developer Studio and Liferay IDE
+
+Liferay IDE is the free and open source version of Liferay's developer tools
+for developing with Liferay Portal Community Edition.  For Liferay Portal
+Enterprise Edition customers, we have developers Liferay Developer Studio
+which is a super-set of the features in Liferay IDE (since it includes a copy)
+but also includes additional features specific to Enterprise Edition customers.

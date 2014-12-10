@@ -1,0 +1,59 @@
+List of EPL derived sources files that are made available through public GIT:
+
+https://github.com/liferay/liferay-ide/tree/1.x/eclipse/common/plugins/
+
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/AbstractEditingModel.java
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/AbstractModel.java
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IEditable.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IEditableModel.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IEditingModel.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IModel.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IModelChangedEvent.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IModelChangedListener.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IModelChangedListenerFilter.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IModelChangeProvider.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IModelChangeProviderExtension.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IModelTextChangeListener.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IReconcilingParticipant.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/IWorkspaceModel.java 
+	com.liferay.ide.eclipse.core/src-external/com/liferay/ide/eclipse/core/model/ModelChangedEvent.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/editor/IDEFormEditorContributor.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/editor/IInputContextListener.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/editor/IModelUndoManager.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/editor/InputContext.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/editor/InputContextManager.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/editor/ModelUndoManager.java 	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/DefaultContentProvider.java
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/SharedPart.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/SharedPartWithButtons.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/IFormEntryListener.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/EditableTablePart.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/FormDetails.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/FormEntry.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/FormEntryAdapter.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/FormLayoutFactory.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/IContextPart.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/IDEFormEditor.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/IDEFormPage.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/IDESection.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/wizard/StringArrayTableWizardSection.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/StructuredViewerPart.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/StructuredViewerSection.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/util/SWTUtil.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/TablePart.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/form/TableSection.java 
+	com.liferay.ide.eclipse.ui/src/com/liferay/ide/eclipse/ui/wizard/RenameDialog.java 
+	com.liferay.ide.eclipse.ui.snippets/src/com/liferay/ide/eclipse/ui/snippets/TaglibVariableItemHelper.java com.liferay.ide.eclipse.portlet.ui/src/com/liferay/ide/eclipse/portlet/ui/editor/DependenciesFormPage.java
+	
+https://github.com/liferay/liferay-ide/tree/1.x/eclipse/server/plugins/
+
+	com.liferay.ide.eclipse.server.core/src/com/liferay/ide/eclipse/server/core/LiferayInstallableRuntime2.java 
+	com.liferay.ide.eclipse.server.tomcat.ui/src/com/liferay/ide/eclipse/server/tomcat/ui/editor/LiferayServerSettingsEditorSection.java 
+	com.liferay.ide.eclipse.server.tomcat.core/src/com/liferay/ide/eclipse/server/tomcat/core/LiferayTomcatRuntime.java 
+	com.liferay.ide.eclipse.server.tomcat.core/src/com/liferay/ide/eclipse/server/tomcat/core/LiferayTomcatServer.java 
+	com.liferay.ide.eclipse.server.tomcat.core/src/com/liferay/ide/eclipse/server/tomcat/core/LiferayTomcatServerBehavior.java 
+	
+https://github.com/liferay/liferay-ide/tree/1.x/eclipse/portal/plugins/
+	
+	com.liferay.ide.eclipse.portlet.ui/src/com/liferay/ide/eclipse/portlet/ui/editor/PortalJarsSection.java 
+	com.liferay.ide.eclipse.portlet.ui/src/com/liferay/ide/eclipse/portlet/ui/editor/PortalTldsSection.java 
+	com.liferay.ide.eclipse.portlet.ui/src/com/liferay/ide/eclipse/portlet/ui/action/SortAction.java 

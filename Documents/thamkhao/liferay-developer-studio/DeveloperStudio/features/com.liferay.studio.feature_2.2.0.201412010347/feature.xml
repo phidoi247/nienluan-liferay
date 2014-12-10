@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.liferay.studio.feature"
+      label="Liferay Developer Studio"
+      version="2.2.0.201412010347"
+      provider-name="Liferay, Inc."
+      plugin="com.liferay.studio.branding">
+
+   <description url="http://www.liferay.com">
+      Liferay Developer Studio
+   </description>
+
+   <copyright>
+      Copyright (c) 2014 Liferay, Inc. All rights reserved.
+
+The contents of this feature are subject to the terms of the
+End User License Agreement for Liferay Developer Studio (&quot;License&quot;).
+You may not use this feature except in compliance with the License.
+You can obtain a copy of the License by contacting Liferay, Inc.
+See the License for the specific language governing permissions
+and limitations under the License, including but not limited
+to distribution rights of the Software.
+   </copyright>
+
+   <requires>
+      <import feature="com.liferay.ide.eclipse.tools" version="2.2.1" match="greaterOrEqual"/>
+      <import feature="com.liferay.ide.alloy" version="2.2.1" match="greaterOrEqual"/>
+      <import feature="org.eclipse.cvs"/>
+      <import feature="org.eclipse.datatools.common.doc.user"/>
+      <import feature="org.eclipse.datatools.connectivity.doc.user"/>
+      <import feature="org.eclipse.datatools.connectivity.feature"/>
+      <import feature="org.eclipse.datatools.connectivity.oda.designer.core.feature"/>
+      <import feature="org.eclipse.datatools.connectivity.oda.designer.feature"/>
+      <import feature="org.eclipse.datatools.connectivity.oda.feature"/>
+      <import feature="org.eclipse.datatools.doc.user"/>
+      <import feature="org.eclipse.datatools.enablement.apache.derby.feature"/>
+      <import feature="org.eclipse.datatools.enablement.feature"/>
+      <import feature="org.eclipse.datatools.enablement.hsqldb.feature"/>
+      <import feature="org.eclipse.datatools.enablement.ibm.feature"/>
+      <import feature="org.eclipse.datatools.enablement.ingres.feature"/>
+      <import feature="org.eclipse.datatools.enablement.jdbc.feature"/>
+      <import feature="org.eclipse.datatools.enablement.jdt.feature"/>
+      <import feature="org.eclipse.datatools.enablement.msft.feature"/>
+      <import feature="org.eclipse.datatools.enablement.mysql.feature"/>
+      <import feature="org.eclipse.datatools.enablement.oda.designer.feature"/>
+      <import feature="org.eclipse.datatools.enablement.oda.feature"/>
+      <import feature="org.eclipse.datatools.enablement.oracle.feature"/>
+      <import feature="org.eclipse.datatools.enablement.postgresql.feature"/>
+      <import feature="org.eclipse.datatools.enablement.sap.feature"/>
+      <import feature="org.eclipse.datatools.enablement.sqlite.feature"/>
+      <import feature="org.eclipse.datatools.enablement.sybase.feature"/>
+      <import feature="org.eclipse.datatools.intro"/>
+      <import feature="org.eclipse.datatools.modelbase.feature"/>
+      <import feature="org.eclipse.datatools.sqldevtools.data.feature"/>
+      <import feature="org.eclipse.datatools.sqldevtools.ddl.feature"/>
+      <import feature="org.eclipse.datatools.sqldevtools.ddlgen.feature"/>
+      <import feature="org.eclipse.datatools.sqldevtools.feature"/>
+      <import feature="org.eclipse.datatools.sqldevtools.parsers.feature"/>
+      <import feature="org.eclipse.datatools.sqldevtools.results.feature"/>
+      <import feature="org.eclipse.datatools.sqldevtools.schemaobjecteditor.feature"/>
+      <import feature="org.eclipse.datatools.sqldevtools.sqlbuilder.feature"/>
+      <import feature="org.eclipse.datatools.sqltools.doc.user"/>
+      <import feature="org.eclipse.draw2d"/>
+      <import feature="org.eclipse.egit"/>
+      <import feature="org.eclipse.emf.codegen.ecore.ui"/>
+      <import feature="org.eclipse.emf.codegen.ecore"/>
+      <import feature="org.eclipse.emf.codegen.ui"/>
+      <import feature="org.eclipse.emf.codegen"/>
+      <import feature="org.eclipse.emf.common.ui"/>
+      <import feature="org.eclipse.emf.common"/>
+      <import feature="org.eclipse.emf.converter"/>
+      <import feature="org.eclipse.emf.databinding"/>
+      <import feature="org.eclipse.emf.databinding.edit"/>
+      <import feature="org.eclipse.emf.ecore"/>
+      <import feature="org.eclipse.emf.ecore.edit"/>
+      <import feature="org.eclipse.emf.ecore.editor"/>
+      <import feature="org.eclipse.emf.edit"/>
+      <import feature="org.eclipse.emf.edit.ui"/>
+      <import feature="org.eclipse.emf.mapping"/>
+      <import feature="org.eclipse.emf.mapping.ecore"/>
+      <import feature="org.eclipse.emf.mapping.ecore.editor"/>
+      <import feature="org.eclipse.emf.mapping.ui"/>
+      <import feature="org.eclipse.emf"/>
+      <import feature="org.eclipse.equinox.p2.core.feature"/>
+      <import feature="org.eclipse.equinox.p2.extras.feature"/>
+      <import feature="org.eclipse.equinox.p2.rcp.feature"/>
+      <import feature="org.eclipse.equinox.p2.user.ui"/>
+      <import feature="org.eclipse.gef"/>
+      <import feature="org.eclipse.help"/>
+      <import feature="org.eclipse.jdt"/>
+      <import feature="org.eclipse.jgit"/>
+      <import feature="org.eclipse.jpt.common.feature"/>
+      <import feature="org.eclipse.jpt.jaxb.feature"/>
+      <import feature="org.eclipse.jpt.jpa.feature"/>
+      <import feature="org.eclipse.jsf.feature"/>
+      <import feature="org.eclipse.jst.common.fproj.enablement.jdt"/>
+      <import feature="org.eclipse.jst.enterprise_core.feature"/>
+      <import feature="org.eclipse.jst.enterprise_ui.feature"/>
+      <import feature="org.eclipse.jst.enterprise_userdoc.feature"/>
+      <import feature="org.eclipse.jst.server_adapters.ext.feature"/>
+      <import feature="org.eclipse.jst.server_adapters.feature"/>
+      <import feature="org.eclipse.jst.server_core.feature"/>
+      <import feature="org.eclipse.jst.server_ui.feature"/>
+      <import feature="org.eclipse.jst.server_userdoc.feature"/>
+      <import feature="org.eclipse.jst.web_core.feature"/>
+      <import feature="org.eclipse.jst.web_ui.feature"/>
+      <import feature="org.eclipse.jst.web_userdoc.feature"/>
+      <import feature="org.eclipse.jst.webpageeditor.feature"/>
+      <import feature="org.eclipse.jst.ws.axis2tools.feature"/>
+      <import feature="org.eclipse.jst.ws.cxf.feature"/>
+      <import feature="org.eclipse.jst.ws.jaxws.dom.feature"/>
+      <import feature="org.eclipse.jst.ws.jaxws.feature"/>
+      <import feature="org.eclipse.jst.ws.jaxws_userdoc.feature"/>
+      <!--
+      <import feature="org.eclipse.m2e.wtp.jaxrs.feature"/>
+      <import feature="org.eclipse.m2e.wtp.jpa.feature"/>
+      -->
+      <import feature="org.eclipse.platform"/>
+      <import feature="org.eclipse.rcp"/>
+      <import feature="org.eclipse.wst.common.fproj"/>
+      <import feature="org.eclipse.wst.common_core.feature"/>
+      <import feature="org.eclipse.wst.common_ui.feature"/>
+      <import feature="org.eclipse.wst.jsdt.feature"/>
+      <import feature="org.eclipse.wst.server_adapters.feature"/>
+      <import feature="org.eclipse.wst.server_core.feature"/>
+      <import feature="org.eclipse.wst.server_ui.feature"/>
+      <import feature="org.eclipse.wst.server_userdoc.feature"/>
+      <import feature="org.eclipse.wst.web_core.feature"/>
+      <import feature="org.eclipse.wst.web_ui.feature"/>
+      <import feature="org.eclipse.wst.web_userdoc.feature"/>
+      <import feature="org.eclipse.wst.ws_core.feature"/>
+      <import feature="org.eclipse.wst.ws_ui.feature"/>
+      <import feature="org.eclipse.wst.ws_userdoc.feature"/>
+      <import feature="org.eclipse.wst.ws_wsdl15.feature"/>
+      <import feature="org.eclipse.wst.xml.xpath2.processor.feature"/>
+      <import feature="org.eclipse.wst.xml_core.feature"/>
+      <import feature="org.eclipse.wst.xml_ui.feature"/>
+      <import feature="org.eclipse.wst.xml_userdoc.feature"/>
+      <import feature="org.eclipse.wst.xsl.feature"/>
+   </requires>
+
+   <plugin
+         id="com.liferay.studio.branding"
+         download-size="5"
+         install-size="6"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.studio.color.editor.ui"
+         download-size="351"
+         install-size="1018"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.studio.doc"
+         download-size="1548"
+         install-size="1605"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.studio.kaleo.core"
+         download-size="173"
+         install-size="308"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.studio.kaleo.ui"
+         download-size="326"
+         install-size="646"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.studio.server.tomcat.core"
+         download-size="13"
+         install-size="29"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.studio.server.tomcat.ui"
+         download-size="10"
+         install-size="16"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.studio.scripting.core"
+         download-size="4761"
+         install-size="5366"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.studio.server.websphere.core"
+         download-size="81"
+         install-size="174"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.studio.server.websphere.ui"
+         download-size="78"
+         install-size="142"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+   <plugin
+         id="com.liferay.studio.product.ui"
+         download-size="132"
+         install-size="553"
+         version="2.2.0.201412010347"
+         unpack="false"/>
+
+</feature>

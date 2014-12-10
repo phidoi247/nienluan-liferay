@@ -1,0 +1,23 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: eEk4f/uRbxDJrZ6/I7j2Q8NCZRAOS
+ OrUZrM2q/AVKXA=
+SHA-256-Digest-Manifest: n+YfIlQlooP/tweDWQsAGNU5Zl0VV9U+n+yXzKECmqg=
+Created-By: 1.7.0_55 (Oracle Corporation)
+
+Name: license.html
+SHA-256-Digest: zCHxQYQ0ymh04/nBZmxIaAVMzQPI75GawGeWb89ze38=
+
+Name: META-INF/maven/org.codehaus.groovy.eclipse/org.codehaus.groovy.j
+ dt.patch/pom.properties
+SHA-256-Digest: n+qhfsSYBeRcwckfoVr8Kn+1bh9XmJItEBwDamjrAf0=
+
+Name: feature.xml
+SHA-256-Digest: e5xuSfazWCsl6h0tVx0SVS77WyDrleBzT4r3CQ+FGZs=
+
+Name: feature.properties
+SHA-256-Digest: y0B6SB4HeP3XnqknF6zkslTJcY/Hsag2zPie1PA1g4k=
+
+Name: META-INF/maven/org.codehaus.groovy.eclipse/org.codehaus.groovy.j
+ dt.patch/pom.xml
+SHA-256-Digest: uUEut4gb3igMXStjYSDorP+3FKnOu+m202efo1B+LP8=
+
